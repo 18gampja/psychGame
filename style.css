@@ -1,0 +1,133 @@
+.onScreen{
+    let sWidth = Screen.width;
+        width: sWidth;
+}
+
+.rectangle_banner_INTRO {
+    z-index: 0;
+    font-family: "Verdana";
+    font-size: 30px;
+    font-weight: 900;
+    text-shadow: -1px -1px 0 #FFFFFF;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #ab7d00;
+}
+
+.window_selection {
+    position: relative;
+    z-index: 1;
+    width: -moz-fit-content;
+    width: 480px;
+    border-radius: 0px 0px 25px 25px;
+    padding: 5px;
+    margin: 0 auto;
+    background-color: #e3c164;
+}
+
+.window_button {
+     position:relative;
+     left: 25%;
+     background: none;
+     border: none;
+     color:Black;
+     font-family: Verdana;
+     font-size: 15px;
+     font-weight: bold;
+     cursor: pointer;
+}
+
+.mainVideo {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+
+}
+.playButton {
+    position:relative;
+    background: none;
+    border: none;
+    color: #005C00;
+    font-family: Verdana;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.pauseButton {
+    position:relative;
+    background: none;
+    border: none;
+    color: #600000;
+    font-family: Verdana;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.muteButton {
+    position:relative;
+    background: none;
+    border: none;
+    color: #600000;
+    font-family: Verdana;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.videoControls{
+    position: relative;
+    z-index: 1;
+    width: -moz-fit-content;
+    width: 480px;
+    border-radius: 0px 0px 25px 25px;
+    padding: 5px;
+    background-color: #e3c164;
+
+    margin: 0 auto;
+    text-align: center;
+}
+.pathSelector{
+    width: -moz-fit-content;
+    width: 480px;
+    border-radius: 25px 25px 25px 25px;
+    background-color: #e3c164;
+
+    position: relative;
+    z-index: 2;
+    top: 100%;
+    transform: translate(0, -215%);
+    text-align: center;
+}
+.aboutPanel {
+    font-family: "Verdana";
+    font-size: 30px;
+    font-weight: 900;
+    text-shadow: -1px -1px 0 #FFFFFF;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 25px;
+    padding: 20px;
+    background-color: #007878;
+
+    position: relative;
+    z-index: 3;
+}
+.aboutText {
+    font-family: "Calibi";
+    font-size: 20px;
+    font-weight: 300;
+    width: 1000px;
+    border-radius: 25px;
+    padding: 20px;
+    background-color: #00ABAA;
+    position: relative;
+    z-index: 2;
+}
+.moveUp{
+    margin-top: -500px;
+    margin-left: 50px;
+}
