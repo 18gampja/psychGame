@@ -1,10 +1,44 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" xmlns="http://www.w3.org/1999/html">
 <head>
 
     <meta charset="UTF-8">
     <title>Trial Website for Couch Counseling Project</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
+
+    <script>
+        class Node {
+            constructor(video)
+            {
+                this.video = video;
+                this.choice1 = null;
+                this.choice2 = null;
+                this.choice3 = null;
+                this.choice4 = null;
+            }
+        }
+
+        class LinkedList {
+            constructor()
+            {
+                this.head = null;
+            }
+        }
+
+        var videoList = new LinkedList();
+        videoList.head = new Node("1-Video.mp4");
+        videoList.head.choice1 = new Node("2-Video.mp4");
+        videoList.head.choice2 = new Node("3-Video.mp4");
+        videoList.head.choice3 = new Node("4-Video.mp4");
+        videoList.head.choice4 = new Node("5-Video.mp4");
+
+
+<!--        alert(videoList.head.video);-->
+<!--        alert(videoList.head.choice1.video);-->
+
+        let currentVideo = videoList.head;
+
+    </script>
 
 </head>
 <body style="background-color:#1b0c2b;"> <!-- Color Name: Haiti -->
@@ -23,6 +57,7 @@
             <!-- Make Specific Screen Appear -->
             <script>
                 function videoAppear(){
+                    document.getElementById("mainVideo").src = currentVideo.video;
                     document.getElementById("gameScreen").style.visibility= "visible";
                     document.getElementById("videoControls").style.visibility= "visible";
                     document.getElementById("aboutScreen").style.visibility= "hidden";
@@ -40,7 +75,8 @@
 
         <!-- Game Screen (Includes Video, Video Controls, and File) -->
         <div id="gameScreen" class="game_screen" style="visibility:hidden">
-            <video id="mainVideo" class="mainVideo" width=1000 height=562 src="testVideo.mp4" type="video/mp4">Your browser does not support HTML5 video.</video>
+
+            <video controls id="mainVideo" class="mainVideo" width=1000 height=562 src="" type="video/mp4">Your browser does not support HTML5 video.</video>
 
             <div id="videoControls" class="videoControls">
                 <button id="playVideoButton" class="playButton">Play</button>
@@ -52,7 +88,24 @@
 
             <!-- Video Controls Script -->
             <script>
-                var vid = document.getElementById("mainVideo");
+                var vid = document.getElementById('mainVideo');
+                var supposedCurrentTime = 0;
+                vid.addEventListener('timeupdate', function() {
+                  if (!vid.seeking) {
+                        supposedCurrentTime = vid.currentTime;
+                  }
+                });
+                vid.addEventListener('seeking', function() {
+                  var delta = vid.currentTime - supposedCurrentTime;
+                  var okay = vid.currentTime > supposedCurrentTime;
+                  if (Math.abs(delta) > 0.01 & okay) {
+                    vid.currentTime = supposedCurrentTime;
+                  }
+                });
+                vid.addEventListener('ended', function() {
+                    supposedCurrentTime = 0;
+                });
+
                 pause = document.getElementById("pauseVideoButton");
                 mute = document.getElementById("muteVideoButton");
                 play = document.getElementById("playVideoButton");
@@ -96,11 +149,11 @@
             <div class="prompt">
                 <dialog id="DialogExample" class="pathSelector">
                     <p>Here is some text for example.</p>
-                    <button id="prompt1">Prompt 1</button>
-                    <button id="prompt2">Prompt 2</button>
+                    <button id="prompt1" style="visibility:hidden">Prompt 1</button>
+                    <button id="prompt2" style="visibility:hidden">Prompt 2</button>
                     <br>
-                    <button id="prompt3">Prompt 3</button>
-                    <button id="prompt4">Prompt 4</button>
+                    <button id="prompt3" style="visibility:hidden">Prompt 3</button>
+                    <button id="prompt4" style="visibility:hidden">Prompt 4</button>
                 </dialog>
 
                 <script type="text/JavaScript">
@@ -116,25 +169,47 @@
                         options.style.visibility= "visible";
                     }
 
+                    if(currentVideo.choice1) {
+                        document.getElementById("prompt1").style.visibility= "visible";
+                    }
+                    if(currentVideo.choice2) {
+                        document.getElementById("prompt2").style.visibility= "visible";
+                    }
+                    if(currentVideo.choice3) {
+                        document.getElementById("prompt3").style.visibility= "visible";
+                    }
+                    if(currentVideo.choice4) {
+                        document.getElementById("prompt4").style.visibility= "visible";
+                    }
+
                     function direction1(){
                         alert('Direction 1!');
                         dialog.close();
-                        unlockOptions()
+                        unlockOptions();
+                        currentVideo = currentVideo.choice1;
+                        document.getElementById("mainVideo").src = currentVideo.video;
+
                     }
                     function direction2(){
                         alert('Direction 2!');
                         dialog.close();
-                        unlockOptions()
+                        unlockOptions();
+                        currentVideo = currentVideo.choice2;
+                        document.getElementById("mainVideo").src = currentVideo.video;
                     }
                     function direction3(){
                         alert('Direction 3!');
                         dialog.close();
-                        unlockOptions()
+                        unlockOptions();
+                        currentVideo = currentVideo.choice3;
+                        document.getElementById("mainVideo").src = currentVideo.video;
                     }
                     function direction4(){
                         alert('Direction 4!');
                         dialog.close();
-                        unlockOptions()
+                        unlockOptions();
+                        currentVideo = currentVideo.choice4;
+                        document.getElementById("mainVideo").src = currentVideo.video;
                     }
                 </script>
             </div>
@@ -148,6 +223,5 @@
                 <div id="aboutDevs" class="aboutText">This project was developed by several Computer Science Students from PSU Abington:<dl><li>Brandon Whitman-Orlin</li><dd>- Role</dd><li>Jacob Gampa</li><dd>- Role</dd><li>Gabriel Nulman</li><dd>- Role</dd><li>Xingyu Jiang</li><dd>- Role</dd><li>Robert Zerambo</li><dd>- Role</dd></dl></div>
         </div>
     </div>
-
 </body>
 </html>
