@@ -42,34 +42,36 @@
     </script>
 
 </head>
-<body style="background-color:#1b0c2b;"> <!-- Color Name: Haiti -->
-    <div class="onScreen">
 
-        <!-- Intro Banner -->
-        <div class="rectangle_banner_INTRO">Video!</div>
+<header class="header">
+    <a class="logo" href='../index.html'>Couch Counseling</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <!-- <li><a href="index.html">Our Work</a></li> -->
+      <li><a href="about.html">About</a></li>
+      <li><a href="video.html">Play Game</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+</header>
+<br>
 
-        <!-- Window Selection Bar -->
-        <div class="window_selection">
-            <button id="homeButton" class="window_button" onclick="location.href='../index.html'">Home</button>
-            <button id="aboutButton" class="window_button" onclick="location.href='about.html'">About</a></button>
-            <button id="startButton" class="window_button" onclick="location.href='video.html'">Play Game</button>
-
-            <!-- Video Screen Appear -->
-            <script>
-                function videoAppear(){
-                    document.getElementById("gameScreen").style.visibility= "visible";
-                    document.getElementById("videoControls").style.visibility= "visible";
-                    document.getElementById("aboutScreen").style.visibility= "hidden";
-                    
-                }
-                document.getElementById("aboutButton").addEventListener("click", aboutAppear);
-                document.getElementById("startButton").addEventListener("click", videoAppear);
-            </script>
-        </div>
+<body>
+    <script>
+        function videoAppear(){
+            document.getElementById("gameScreen").style.visibility= "visible";
+            document.getElementById("videoControls").style.visibility= "visible";
+            document.getElementById("aboutScreen").style.visibility= "hidden";
+            
+        }
+        document.getElementById("aboutButton").addEventListener("click", aboutAppear);
+        document.getElementById("startButton").addEventListener("click", videoAppear);
+    </script>
 
         <!-- Game Screen (Includes Video, Video Controls, and File) -->
         <div id="gameScreen" class="game_screen">
-            <video id="mainVideo" class="mainVideo" width=1000 height=562 src="../testVideo.mp4" type="video/mp4">Your browser does not support HTML5 video.</video>
+            <video id="mainVideo" class="mainVideo" src="../testVideo.mp4" type="video/mp4">Your browser does not support HTML5 video.</video>
 
             <div id="videoControls" class="videoControls">
                 <button id="playVideoButton" class="playButton">Play</button>

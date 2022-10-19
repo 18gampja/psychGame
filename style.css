@@ -1,133 +1,267 @@
-.onScreen{
-    let sWidth = Screen.width;
-        width: sWidth;
+/* Set page color NOT including header */
+body { 
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  /* background-color: #f4f4f4; */
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+
+  background-color: #5664a5;
+  background-image: url("images/philly.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-.rectangle_banner_INTRO {
-    z-index: 0;
-    font-family: "Verdana";
-    font-size: 30px;
-    font-weight: 900;
-    text-shadow: -1px -1px 0 #FFFFFF;
-    width: -moz-fit-content;
-    width: fit-content;
-    border-radius: 25px;
-    padding: 20px;
-    margin: 0 auto;
-    background-color: #ab7d00;
+.couch_counsel {
+  margin: auto;
+  width: 50%;
+  height: 300px;
+  border: 5px solid #e4630d;
+  background-color: #e4630d;
+  margin-top: 50px;
+  z-index: 25;
+  text-align: center;
+  align-content: center;
 }
 
-.window_selection {
-    position: relative;
-    z-index: 1;
-    width: -moz-fit-content;
-    width: 480px;
-    border-radius: 0px 0px 25px 25px;
-    padding: 5px;
-    margin: 0 auto;
-    background-color: #e3c164;
+.headshot {
+  padding-top: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
 }
 
-.window_button {
-     position:relative;
-     left: 25%;
-     background: none;
-     border: none;
-     color:Black;
-     font-family: Verdana;
-     font-size: 15px;
-     font-weight: bold;
-     cursor: pointer;
+.aboutPanel {
+  text-align: center;
+  font-family: "Verdana";
+  font-size: 30px;
+  font-weight: 900;
+  text-shadow: -1px -1px 0 #FFFFFF;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  padding: 20px;
+  background-color: #315cb9;
+
+  position: relative;;
+  z-index: 3;
+}
+
+.aboutText {
+  text-align: center;
+  font-family: "Verdana";
+  font-size: 30px;
+  font-weight: 900;
+  text-shadow: -1px -1px 0 #FFFFFF;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  padding: 20px;
+  background-color: #8c2da8;
+
+  position: relative;;
+  z-index: 3;
+}
+
+.pathSelector{
+  /* width: -moz-fit-content; */
+  width: 480px;
+  border-radius: 25px 25px 25px 25px;
+  background-color: #fcfcfc;
+
+  position: relative;
+  z-index: 2;
+  text-align: center;
 }
 
 .mainVideo {
-    position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 25px;
+  width: 60%;
+  margin-top: 50px;
+  position: relative;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
 
 }
 .playButton {
-    position:relative;
-    background: none;
-    border: none;
-    color: #005C00;
-    font-family: Verdana;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
+  position:relative;
+  background: none;
+  border: none;
+  color: #15e215;
+  font-family: Verdana;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
 }
 .pauseButton {
-    position:relative;
-    background: none;
-    border: none;
-    color: #600000;
-    font-family: Verdana;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
+  position:relative;
+  background: none;
+  border: none;
+  color: #600000;
+  font-family: Verdana;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
 }
 .muteButton {
-    position:relative;
-    background: none;
-    border: none;
-    color: #600000;
-    font-family: Verdana;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
+  position:relative;
+  background: none;
+  border: none;
+  color: #600000;
+  font-family: Verdana;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
 }
 .videoControls{
-    position: relative;
-    z-index: 1;
-    width: -moz-fit-content;
-    width: 480px;
-    border-radius: 0px 0px 25px 25px;
-    padding: 5px;
-    background-color: #e3c164;
+  position: relative;
+  z-index: 1;
+  width: -moz-fit-content;
+  width: 480px;
+  border-radius: 0px 0px 25px 25px;
+  padding: 5px;
+  background-color: #ffffff;
 
-    margin: 0 auto;
-    text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
-.pathSelector{
-    width: -moz-fit-content;
-    width: 480px;
-    border-radius: 25px 25px 25px 25px;
-    background-color: #e3c164;
 
-    position: relative;
-    z-index: 2;
-    top: 100%;
-    transform: translate(0, -215%);
-    text-align: center;
-}
-.aboutPanel {
-    font-family: "Verdana";
-    font-size: 30px;
-    font-weight: 900;
-    text-shadow: -1px -1px 0 #FFFFFF;
-    width: -moz-fit-content;
-    width: fit-content;
-    border-radius: 25px;
-    padding: 20px;
-    background-color: #007878;
 
-    position: relative;
-    z-index: 3;
+a {
+  color: #000;
 }
-.aboutText {
-    font-family: "Calibi";
-    font-size: 20px;
-    font-weight: 300;
-    width: 1000px;
-    border-radius: 25px;
-    padding: 20px;
-    background-color: #00ABAA;
-    position: relative;
-    z-index: 2;
+
+/* header */
+
+.header {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
 }
-.moveUp{
-    margin-top: -500px;
-    margin-left: 50px;
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
 }
