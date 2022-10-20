@@ -27,17 +27,24 @@
         }
 
         var videoList = new LinkedList();
-        videoList.head = new Node("1-Video.mp4");
-        videoList.head.choice1 = new Node("2-Video.mp4");
-        videoList.head.choice2 = new Node("3-Video.mp4");
-        videoList.head.choice3 = new Node("4-Video.mp4");
-        videoList.head.choice4 = new Node("5-Video.mp4");
+        videoList.head = new Node("../1-Video.mp4");
+        videoList.head.choice1 = new Node("../2-Video.mp4");
+        videoList.head.choice2 = new Node("../3-Video.mp4");
+        videoList.head.choice3 = new Node("../4-Video.mp4");
+        videoList.head.choice4 = new Node("../5-Video.mp4");
 
 
         // alert(videoList.head.video);
         // alert(videoList.head.choice1.video);
 
         let currentVideo = videoList.head;
+
+        function videoAppear(){
+            document.getElementById("mainVideo").src = currentVideo.video;
+            document.getElementById("gameScreen").style.visibility= "visible";
+            document.getElementById("videoControls").style.visibility= "visible";
+            document.getElementById("aboutScreen").style.visibility= "hidden";     
+        }
 
     </script>
 
@@ -57,21 +64,11 @@
 </header>
 <br>
 
-<body>
-    <script>
-        function videoAppear(){
-            document.getElementById("gameScreen").style.visibility= "visible";
-            document.getElementById("videoControls").style.visibility= "visible";
-            document.getElementById("aboutScreen").style.visibility= "hidden";
-            
-        }
-        document.getElementById("aboutButton").addEventListener("click", aboutAppear);
-        document.getElementById("startButton").addEventListener("click", videoAppear);
-    </script>
+<body onload=videoAppear()>
 
         <!-- Game Screen (Includes Video, Video Controls, and File) -->
         <div id="gameScreen" class="game_screen">
-            <video id="mainVideo" class="mainVideo" src="../testVideo.mp4" type="video/mp4">Your browser does not support HTML5 video.</video>
+            <video id="mainVideo" class="mainVideo" type="video/mp4">Your browser does not support HTML5 video.</video>
 
             <div id="videoControls" class="videoControls">
                 <button id="playVideoButton" class="playButton">Play</button>
@@ -132,37 +129,61 @@
             <script>
                 document.getElementById('mainVideo').addEventListener('ended',afterVideo);
                 function lockOptions(){
-                    var options = document.getElementById('videoControls')
+                    var options = document.getElementById('videoControls');
                     options.style.visibility= "hidden";
                 }
                 function afterVideo() {
-                    var dialog = document.getElementById('DialogExample');
                     lockOptions();
-                    dialog.show();
+                    var prm1 = document.getElementById('prompt1');
+                    prm1.style.display = "inline-flex";
+                    var prm2 = document.getElementById('prompt2');
+                    prm2.style.display = "inline-flex";
+                    var prm3 = document.getElementById('prompt3');
+                    prm3.style.display = "inline-flex";
+                    var prm4 = document.getElementById('prompt4');
+                    prm4.style.display = "inline-flex";
                 }
             </script>
 
             <!-- Direction Prompt -->
-            <div class="prompt">
-                <dialog id="DialogExample" class="pathSelector">
-                    <p>Here is some text for example.</p>
-                    <button id="prompt1">Prompt 1</button>
-                    <button id="prompt2">Prompt 2</button>
-                    <br>
-                    <button id="prompt3">Prompt 3</button>
-                    <button id="prompt4">Prompt 4</button>
-                </dialog>
+            <br>
 
+            <div class="prompts" style="text-align: center">
+                <div id="prompt1" class="pathSelector">
+                    <h4>Let Ms. Jones know that participation is entirely voluntary.</h4>
+                </div>
+
+                <div id="prompt2" class="pathSelector">
+                    <h4>Remind Ms. Jones that she already agreed to the appointment.</h4>
+                </div>
+
+                <div id="tip" class="tipPopup" style="visibility: hidden">
+                    <h3></h3>
+                </div>
+
+                <div id="prompt3" class="pathSelector">
+                    <h4>Let Ms. Jones know about the benefits of your program.</h4>
+                </div>
+
+                <div id="prompt4" class="pathSelector">
+                    <h4>Allow Ms. Jones more time to think about it and call her back later.</h4>
+                </div>
+
+            <div class="prompt" style="text-align: center">
                 <script type="text/JavaScript">
-                                        document.getElementById("prompt1").addEventListener("click", direction1);
+                    document.getElementById("prompt1").addEventListener("click", direction1);
                     document.getElementById("prompt2").addEventListener("click", direction2);
                     document.getElementById("prompt3").addEventListener("click", direction3);
                     document.getElementById("prompt4").addEventListener("click", direction4);
 
-                    var dialog = document.getElementById('DialogExample');
+                    var prm1 = document.getElementById('prompt1');
+                    var prm2 = document.getElementById('prompt2');
+                    var prm3 = document.getElementById('prompt3');
+                    var prm4 = document.getElementById('prompt4');
+                    var tipReply = document.getElementById('tip');
 
                     function unlockOptions(){
-                        var options = document.getElementById('videoControls')
+                        var options = document.getElementById('videoControls');
                         options.style.visibility= "visible";
                     }
 
@@ -180,33 +201,73 @@
                     }
 
                     function direction1(){
-                        alert('Direction 1!');
-                        dialog.close();
+                        // alert('Direction 1!');
+                        
+                        prm1.style.backgroundColor = "#de821f"; //OK respone 
+                        tip.textContent = 'Not the worst response.  What else can you say to Mrs. Jones to facilitate a home visit?';
+                        tip.style.visibility = "visible";
+                        
+                        prm1.style.display = "none";
+                        prm2.style.display = "none";
+                        prm3.style.display = "none";
+                        prm4.style.display = "none";
+
                         unlockOptions();
-                        currentVideo = currentVideo.choice1;
-                        document.getElementById("mainVideo").src = currentVideo.video;
+
+                        // currentVideo = currentVideo.choice1;
+                        // document.getElementById("mainVideo").src = currentVideo.video;
 
                     }
                     function direction2(){
-                        alert('Direction 2!');
-                        dialog.close();
+                        // alert('Direction 2!');
+                        
+                        prm2.style.backgroundColor = "#bd0f0f"; //BAD respone 
+                        tip.textContent = 'Not a good response!  How might you deliver this message differently?';
+                        tip.style.visibility = "visible";
+                        
+                        prm1.style.display = "none";
+                        prm2.style.display = "none";
+                        prm3.style.display = "none";
+                        prm4.style.display = "none";
+
                         unlockOptions();
-                        currentVideo = currentVideo.choice2;
-                        document.getElementById("mainVideo").src = currentVideo.video;
+
+                        // currentVideo = currentVideo.choice2;
+                        // document.getElementById("mainVideo").src = currentVideo.video;
                     }
                     function direction3(){
-                        alert('Direction 3!');
-                        dialog.close();
+                        // alert('Direction 3!');
+                        
+                        prm3.style.backgroundColor = "#44f50f"; //GOOD respone 
+                        tip.textContent = 'Good!  This response is less likely to elicit a defensive response from the client while continuing to allow her a choice to participate.';
+                        tip.style.visibility = "visible";
+                        
+                        prm1.style.display = "none";
+                        prm2.style.display = "none";
+                        prm3.style.display = "none";
+                        prm4.style.display = "none";
+
                         unlockOptions();
+
                         currentVideo = currentVideo.choice3;
                         document.getElementById("mainVideo").src = currentVideo.video;
                     }
                     function direction4(){
-                        alert('Direction 4!');
-                        dialog.close();
+                        // alert('Direction 4!');
+
+                        prm4.style.backgroundColor = "#de821f"; //OK respone 
+                        tip.textContent = 'Not the worst response.  What else can you say to Mrs. Jones to facilitate a home visit?';
+                        tip.style.visibility = "visible";
+                        
+                        prm1.style.display = "none";
+                        prm2.style.display = "none";
+                        prm3.style.display = "none";
+                        prm4.style.display = "none";
+
                         unlockOptions();
-                        currentVideo = currentVideo.choice4;
-                        document.getElementById("mainVideo").src = currentVideo.video;
+
+                        // currentVideo = currentVideo.choice4;
+                        // document.getElementById("mainVideo").src = currentVideo.video;
                     }
                 </script>
             </div>

@@ -66,25 +66,43 @@ body {
   z-index: 3;
 }
 
-.pathSelector{
-  /* width: -moz-fit-content; */
-  width: 480px;
-  border-radius: 25px 25px 25px 25px;
+.tipPopup {
+  width: 300px;
+  inline-size: 150px;
+  overflow-wrap: break-word;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-radius: 15px 15px 15px 15px;
   background-color: #fcfcfc;
-
+  display: inline-flex;
+  flex-wrap: nowrap;
   position: relative;
-  z-index: 2;
+  z-index: 5;
+  text-align: center;
+}
+
+.pathSelector {
+  width: auto;
+  inline-size: 150px;
+  overflow-wrap: break-word;
+  border-radius: 15px 15px 15px 15px;
+  background-color: #fcfcfc;
+  display: none;
+  flex-wrap: nowrap;
+  position: relative;
+  z-index: 5;
   text-align: center;
 }
 
 .mainVideo {
-  width: 70%;
+  width: auto;
   margin-top: 50px;
   position: relative;
   display: flex;
   margin-left: auto;
   margin-right: auto;
   border-radius: 25px;
+  margin-bottom: 0;
 
 }
 .playButton {
@@ -120,7 +138,7 @@ body {
 .videoControls{
   position: relative;
   z-index: 1;
-  width: -moz-fit-content;
+  width: auto;
   width: 480px;
   border-radius: 0px 0px 25px 25px;
   padding: 5px;
