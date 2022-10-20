@@ -95,7 +95,8 @@ body {
 }
 
 .mainVideo {
-  width: auto;
+  min-width: 20%;
+  max-width: 70%;
   margin-top: 50px;
   position: relative;
   display: flex;
@@ -111,7 +112,7 @@ body {
   border: none;
   color: #15e215;
   font-family: Verdana;
-  font-size: 15px;
+  font-size:calc(12 + 1vw);
   font-weight: bold;
   cursor: pointer;
 }
@@ -121,7 +122,7 @@ body {
   border: none;
   color: #600000;
   font-family: Verdana;
-  font-size: 15px;
+  font-size:calc(12 + 1vw);
   font-weight: bold;
   cursor: pointer;
 }
@@ -131,14 +132,16 @@ body {
   border: none;
   color: #600000;
   font-family: Verdana;
-  font-size: 15px;
+  font-size:calc(12 + 1vw);
   font-weight: bold;
   cursor: pointer;
 }
 .videoControls{
   position: relative;
   z-index: 1;
-  width: auto;
+  min-width: 20%;
+  max-width: 70%;
+  /* width: auto; */
   width: 480px;
   border-radius: 0px 0px 25px 25px;
   padding: 5px;
@@ -146,6 +149,9 @@ body {
 
   margin: 0 auto;
   text-align: center;
+
+  inline-size: 200px;
+  overflow-wrap: break-word;
 }
 
 
