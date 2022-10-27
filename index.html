@@ -3,151 +3,38 @@
 <head>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Trial Website for Couch Counseling Project</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
 
 </head>
-<body style="background-color:#1b0c2b;"> <!-- Color Name: Haiti -->
 
-    <div class="onScreen">
+<header class="header">
+    <a class="logo" href='index.html'>Couch Counseling</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+      <!-- <li><a href="index.html">Our Work</a></li> -->
+      <li><a href="sites/about.html">About</a></li>
+      <li><a href="sites/video.html">Play Game</a></li>
+      <li><a href="sites/gallery.html">Gallery</a></li>
+      <li><a href="sites/login.html">Login</a></li>
+    </ul>
+</header>
+<br>
 
-        <!-- Intro Banner -->
-        <div class="rectangle_banner_INTRO">Welcome to Couch Counseling!</div>
-
-        <!-- Window Selection Bar -->
-        <div class="window_selection">
-            <button id="homeButton" class="window_button" onclick="alert('You pressed the button!')">Home</button>
-            <button id="aboutButton" class="window_button">About</button>
-            <button id="startButton" class="window_button">Play Game</button>
-
-            <!-- Make Specific Screen Appear -->
-            <script>
-                function videoAppear(){
-                    document.getElementById("gameScreen").style.visibility= "visible";
-                    document.getElementById("videoControls").style.visibility= "visible";
-                    document.getElementById("aboutScreen").style.visibility= "hidden";
-                }
-                function aboutAppear(){
-                    document.getElementById("aboutScreen").style.visibility= "visible";
-                    document.getElementById("gameScreen").style.visibility= "hidden";
-                    document.getElementById("videoControls").style.visibility= "hidden";
-                }
-                document.getElementById("aboutButton").addEventListener("click", aboutAppear);
-                document.getElementById("startButton").addEventListener("click", videoAppear);
-            </script>
-
-        </div>
-
-        <!-- Game Screen (Includes Video, Video Controls, and File) -->
-        <div id="gameScreen" class="game_screen" style="visibility:hidden">
-            <video id="mainVideo" class="mainVideo" width=1000 height=562 src="testVideo.mp4" type="video/mp4">Your browser does not support HTML5 video.</video>
-
-            <div id="videoControls" class="videoControls">
-                <button id="playVideoButton" class="playButton">Play</button>
-                <button id="pauseVideoButton" class="pauseButton">Pause</button>
-                <button id="muteVideoButton" class="muteButton">Mute</button>
-                <button id="placeholderButton" onclick="alert('You pressed the button!')" class="pauseButton">Captions</button>
-                <button id="placeholderButton2" onclick="alert('You pressed the button!')" class="pauseButton">View File</button>
-            </div>
-
-            <!-- Video Controls Script -->
-            <script>
-                var vid = document.getElementById("mainVideo");
-                pause = document.getElementById("pauseVideoButton");
-                mute = document.getElementById("muteVideoButton");
-                play = document.getElementById("playVideoButton");
-
-                function playVid() {
-                  vid.play();
-                }
-
-                function pauseVid() {
-                  vid.pause();
-                }
-                function muteVid() {
-                  if(vid.muted == true){
-                    mute.innerHTML = 'Mute';
-                    vid.muted = false;
-                  } else {
-                    mute.innerHTML = 'Unmute';
-                    vid.muted = true;
-                  }
-                }
-                play.addEventListener("click", playVid);
-                pause.addEventListener("click", pauseVid);
-                mute.addEventListener("click", muteVid);
-            </script>
-
-            <!-- Function to be Run on End of Video -->
-            <script>
-                document.getElementById('mainVideo').addEventListener('ended',afterVideo);
-                function lockOptions(){
-                    var options = document.getElementById('videoControls')
-                    options.style.visibility= "hidden";
-                }
-                function afterVideo() {
-                    var dialog = document.getElementById('DialogExample');
-                    lockOptions();
-                    dialog.show();
-                }
-            </script>
-
-            <!-- Direction Prompt -->
-            <div class="prompt">
-                <dialog id="DialogExample" class="pathSelector">
-                    <p>Here is some text for example.</p>
-                    <button id="prompt1">Prompt 1</button>
-                    <button id="prompt2">Prompt 2</button>
-                    <br>
-                    <button id="prompt3">Prompt 3</button>
-                    <button id="prompt4">Prompt 4</button>
-                </dialog>
-
-                <script type="text/JavaScript">
-                    document.getElementById("prompt1").addEventListener("click", direction1);
-                    document.getElementById("prompt2").addEventListener("click", direction2);
-                    document.getElementById("prompt3").addEventListener("click", direction3);
-                    document.getElementById("prompt4").addEventListener("click", direction4);
-
-                    var dialog = document.getElementById('DialogExample');
-
-                    function unlockOptions(){
-                        var options = document.getElementById('videoControls')
-                        options.style.visibility= "visible";
-                    }
-
-                    function direction1(){
-                        alert('Direction 1!');
-                        dialog.close();
-                        unlockOptions()
-                    }
-                    function direction2(){
-                        alert('Direction 2!');
-                        dialog.close();
-                        unlockOptions()
-                    }
-                    function direction3(){
-                        alert('Direction 3!');
-                        dialog.close();
-                        unlockOptions()
-                    }
-                    function direction4(){
-                        alert('Direction 4!');
-                        dialog.close();
-                        unlockOptions()
-                    }
-                </script>
-            </div>
-        </div>
-
-        <!-- About Screen (Includes About Information, and Contact Information) -->
-        <div id="aboutScreen" class="about_screen moveUp" style="visibility:hidden">
-            <div class="aboutPanel">About this Project:</div>
-                <div id="aboutText" class="aboutText">Couch Counseling is a video-training software made by several Penn State Abington Computer Science Students for <a href="https://www.abington.psu.edu/person/michael-lavetsky"target="_blank">Professor Lavetsky</a> and the <a href="https://www.abington.psu.edu/directory/rhs"target="_blank">Rehabilitation and Human Services committee</a> at Penn State to help prepare psychology students for at-home counseling sessions with members of their community. This project utilizes professor-curated videos to immerse the student in the case they are working on, allowing them to simulate traveling to a client's home, entering their house, and administering an at-home counseling session, all from the comfort of their computer.</div>
-            <div class="aboutPanel">About the Developers:</div>
-                <div id="aboutDevs" class="aboutText">This project was developed by several Computer Science Students from PSU Abington:<dl><li>Brandon Whitman-Orlin</li><dd>- Role</dd><li>Jacob Gampa</li><dd>- Role</dd><li>Gabriel Nulman</li><dd>- Role</dd><li>Xingyu Jiang</li><dd>- Role</dd><li>Robert Zerambo</li><dd>- Role</dd></dl></div>
-        </div>
-    </div>
-
+<body>
+  <div class="couch_counsel">
+    <h2>Project To-Do List:</h2>
+    <h5>* Fix Video Control Bar Width</h5>
+    <h5>* Animations</h5>
+    <h5>* Sidebar Menu (Holds View File - See accompanying asset)</h5>
+    <h5>* Polish the Login Screen (Add forgot password and DB integration)</h5>
+    <h5>* Gallery Screen</h5>
+    <h5>* Change cancel button on "Login Screen" to clear</h5>
+    <h5>* Compress background image for faster loading times (SEO stuff)</h5>
+    <h5>* DOWN THE LINE: Caption API/Dynamic Captioning</h5>
+    <h5>* Alt text and Color Pallete for Accessibility</h5>
+    <!-- <br> -->
+  </div>
 </body>
-</html>
