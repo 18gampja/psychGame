@@ -6,7 +6,7 @@ body {
   justify-content: center;
 
   background-color: #5664a5;
-  background-image: url("images/philly.jpg");
+  background-image: url("images/philly_compressed.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
