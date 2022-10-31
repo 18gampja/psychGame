@@ -354,9 +354,14 @@ span.psw {
   padding-left: 50px;
   /* display: flex; */
   /* align-items: center; */
-  display: block;
+  display: inline-block;
+  /* overflow-wrap: break-word; */
+  inline-size: 50%;
   /* text-align: center; */
   position: relative;
+  margin-left: 25%;
+  margin-right: 25%;
+  
 }
 
 /* Change styles for span and cancel button on extra small screens */
