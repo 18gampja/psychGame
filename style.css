@@ -74,22 +74,22 @@ body {
 }
 
 .tipPopup {
-  width: 300px;
-  inline-size: 150px;
+  margin-left: 25%;
+  margin-right: 25%;
   overflow-wrap: break-word;
-  margin-left: 50px;
-  margin-right: 50px;
+  display: block;
   border-radius: 15px 15px 15px 15px;
   background-color: #fcfcfc;
-  display: inline-flex;
+  padding: 20px;
   flex-wrap: nowrap;
-  position: relative;
   z-index: 5;
   text-align: center;
 }
 
 .pathSelector {
   width: auto;
+  /* margin-top: 20px; */
+  margin: 2px;
   inline-size: 150px;
   overflow-wrap: break-word;
   border-radius: 15px 15px 15px 15px;
@@ -351,13 +351,8 @@ span.psw {
 .login_container {
   width: 50%;
   height: 50%;
-  padding-left: 50px;
-  /* display: flex; */
-  /* align-items: center; */
   display: inline-block;
-  /* overflow-wrap: break-word; */
   inline-size: 50%;
-  /* text-align: center; */
   position: relative;
   margin-left: 25%;
   margin-right: 25%;

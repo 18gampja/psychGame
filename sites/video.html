@@ -75,7 +75,12 @@
                 <button id="pauseVideoButton" class="pauseButton">Pause</button>
                 <button id="muteVideoButton" class="muteButton">Mute</button>
                 <button id="placeholderButton" onclick="alert('You pressed the button!')" class="pauseButton">Captions</button>
-                <button id="placeholderButton2" onclick="alert('You pressed the button!')" class="pauseButton">View File</button>
+                <button id="placeholderButton2" onclick="alert('You pressed the button!')" class="pauseButton">View Client File</button>
+            </div>
+            <br>
+
+            <div id="tip" class="tipPopup" style="visibility: hidden">
+                <h3></h3>
             </div>
 
             <!-- Video Controls Script -->
@@ -130,7 +135,8 @@
                 document.getElementById('mainVideo').addEventListener('ended',afterVideo);
                 function lockOptions(){
                     var options = document.getElementById('videoControls');
-                    options.style.visibility= "hidden";
+                    // options.style.visibility= "hidden";
+                    options.style.display = 'none';
                 }
                 function afterVideo() {
                     lockOptions();
@@ -146,7 +152,6 @@
             </script>
 
             <!-- Direction Prompt -->
-            <br>
 
             <div class="prompts" style="text-align: center">
                 <div id="prompt1" class="pathSelector">
@@ -155,10 +160,6 @@
 
                 <div id="prompt2" class="pathSelector">
                     <h4>Remind Ms. Jones that she already agreed to the appointment.</h4>
-                </div>
-
-                <div id="tip" class="tipPopup" style="visibility: hidden">
-                    <h3></h3>
                 </div>
 
                 <div id="prompt3" class="pathSelector">
