@@ -6,7 +6,7 @@ body {
   justify-content: center;
 
   background-color: #5664a5;
-  background-image: url("images/philly.jpg");
+  background-image: url("images/philly_compressed.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -35,7 +35,7 @@ body {
 .aboutPanel {
   text-align: center;
   font-family: "Verdana";
-  font-size: 30px;
+  font-size:calc(20 + 1vw);
   font-weight: 900;
   /* text-shadow: -1px -1px 0 #FFFFFF; */
   color: white;
@@ -52,7 +52,7 @@ body {
 .aboutText {
   text-align: center;
   font-family: "Verdana";
-  font-size: 30px;
+  font-size:calc(20 + 1vw);
   font-weight: 900;
   /* text-shadow: -1px -1px 0 #FFFFFF; */
   color: white;
@@ -61,8 +61,10 @@ body {
   border-radius: 25px;
   padding: 20px;
   background-color: #8c2da8;
+  inline-size: 50%;
+  overflow-wrap: break-word;
 
-  position: relative;;
+  /* position: relative; */
   z-index: 3;
 }
 
@@ -72,28 +74,28 @@ body {
 }
 
 .tipPopup {
-  width: 300px;
-  inline-size: 150px;
+  margin-left: 25%;
+  margin-right: 25%;
   overflow-wrap: break-word;
-  margin-left: 50px;
-  margin-right: 50px;
+  display: block;
   border-radius: 15px 15px 15px 15px;
   background-color: #fcfcfc;
-  display: inline-flex;
+  padding: 20px;
   flex-wrap: nowrap;
-  position: relative;
   z-index: 5;
   text-align: center;
 }
 
 .pathSelector {
   width: auto;
+  /* margin-top: 20px; */
+  margin: 2px;
   inline-size: 150px;
   overflow-wrap: break-word;
   border-radius: 15px 15px 15px 15px;
   background-color: #fcfcfc;
   display: none;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   position: relative;
   z-index: 5;
   text-align: center;
@@ -297,6 +299,7 @@ a {
 }
 
 
+
 input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
@@ -306,7 +309,7 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
-button {
+.loginbutton {
   background-color: #172edb;
   color: white;
   padding: 14px 20px;
@@ -348,12 +351,12 @@ span.psw {
 .login_container {
   width: 50%;
   height: 50%;
-  padding-left: 50px;
-  /* display: flex; */
-  /* align-items: center; */
-  display: block;
-  /* text-align: center; */
+  display: inline-block;
+  inline-size: 50%;
   position: relative;
+  margin-left: 25%;
+  margin-right: 25%;
+  
 }
 
 /* Change styles for span and cancel button on extra small screens */
