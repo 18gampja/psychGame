@@ -1,0 +1,61 @@
+{
+    "video1" :
+        {
+            "url" : "dummyurl.com",
+            "choice1" : ["Let Ms. Jones know that participation is entirely voluntary.", 
+                        "False", 
+                        "Not the worst response.  What else can you say to Mrs. Jones to facilitate a home visit?"],
+
+            "choice2" : ["Remind Ms. Jones that she already agreed to the appointment.", 
+                        "False", 
+                        "Not a good response!  How might you deliver this message differently?"],
+
+            "choice3" : [{"text" : "Let Ms. Jones know about the benefits of your program."}, 
+                        {"progression" : "True"}, 
+                        {"tip" : "Good!  This response is less likely to elicit a defensive response from the client while continuing to allow her a choice to participate."}],
+
+            "choice4" : ["Allow Ms. Jones more time to think about it and call her back later.", 
+                        "False", 
+                        "Not the worst response.  What else can you say to Mrs. Jones to facilitate a home visit?"]
+        },
+
+    "video2" : [
+        {
+            "url" : "dummyurl.com",
+            "choice1" : ["choice text", "False", "good/bad/ugly"],
+            "choice2" : ["choice text", "False", "good/bad/ugly"],
+            "choice3" : ["choice text", "False", "good/bad/ugly"],
+            "choice4" : ["choice text", "False", "good/bad/ugly"]
+        }
+    ],
+
+    "video3" : [
+        {
+            "url" : "dummyurl.com",
+            "choice1" : ["choice text", "False", "good/bad/ugly"],
+            "choice2" : ["choice text", "False", "good/bad/ugly"],
+            "choice3" : ["choice text", "False", "good/bad/ugly"],
+            "choice4" : ["choice text", "False", "good/bad/ugly"]
+        }
+    ],
+
+    "video4" : [
+        {
+            "url" : "dummyurl.com",
+            "choice1" : ["choice text", "False", "good/bad/ugly"],
+            "choice2" : ["choice text", "False", "good/bad/ugly"],
+            "choice3" : ["choice text", "False", "good/bad/ugly"],
+            "choice4" : ["choice text", "False", "good/bad/ugly"]
+        }
+    ],
+
+    "video5" : [
+        {
+            "url" : "dummyurl.com",
+            "choice1" : ["choice text", "False", "good/bad/ugly"],
+            "choice2" : ["choice text", "False", "good/bad/ugly"],
+            "choice3" : ["choice text", "False", "good/bad/ugly"],
+            "choice4" : ["choice text", "False", "good/bad/ugly"]
+        }
+    ]
+}
