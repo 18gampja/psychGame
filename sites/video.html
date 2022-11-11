@@ -7,47 +7,9 @@
     <title>Simulation Game</title>
     <link rel="stylesheet" type="text/css" href="../style.css"/>
     <link rel="icon" type="image/x-icon" href="/images/clipboard.ico">
-
-    <script>
-        class Node {
-            constructor(video)
-            {
-                this.video = video;
-                this.choice1 = null;
-                this.choice2 = null;
-                this.choice3 = null;
-                this.choice4 = null;
-            }
-        }
-
-        class LinkedList {
-            constructor()
-            {
-                this.head = null;
-            }
-        }
-
-        var videoList = new LinkedList();
-        videoList.head = new Node("../videos/1-Video.mp4");
-        videoList.head.choice1 = new Node("../videos/2-Video.mp4");
-        videoList.head.choice2 = new Node("../videos/3-Video.mp4");
-        videoList.head.choice3 = new Node("../videos/4-Video.mp4");
-        videoList.head.choice4 = new Node("../videos/5-Video.mp4");
-
-
-        // alert(videoList.head.video);
-        // alert(videoList.head.choice1.video);
-
-        let currentVideo = videoList.head;
-
-        function videoAppear(){
-            document.getElementById("mainVideo").src = currentVideo.video;
-            document.getElementById("gameScreen").style.visibility= "visible";
-            document.getElementById("videoControls").style.visibility= "visible";
-            document.getElementById("aboutScreen").style.visibility= "hidden";     
-        }
-
-    </script>
+    <!-- <source src="https://drive.google.com/file/d/13U0KcfWsgn8ZbECGqqndGjXsuWA2VHw9/view?usp=share_link" type="video/ogg"> -->
+    <!-- <script type="text/javascript" src="./scripts/info.json"></script> -->
+    <script type = "module" defer src="./scripts/video.js"></script>
 
 </head>
 
@@ -131,74 +93,6 @@
             <div id="tip" class="tipPopup" style="visibility: hidden">
                 <h3></h3>
             </div>
-
-            <!-- Video Controls Script -->
-            <script>
-                var vid = document.getElementById('mainVideo');
-                var supposedCurrentTime = 0;
-                vid.addEventListener('timeupdate', function() {
-                  if (!vid.seeking) {
-                        supposedCurrentTime = vid.currentTime;
-                  }
-                });
-                vid.addEventListener('seeking', function() {
-                  var delta = vid.currentTime - supposedCurrentTime;
-                  var okay = vid.currentTime > supposedCurrentTime;
-                  if (Math.abs(delta) > 0.01 & okay) {
-                    vid.currentTime = supposedCurrentTime;
-                  }
-                });
-                vid.addEventListener('ended', function() {
-                    supposedCurrentTime = 0;
-                });
-
-                pause = document.getElementById("pauseVideoButton");
-                mute = document.getElementById("muteVideoButton");
-                play = document.getElementById("playVideoButton");
-
-                function playVid() {
-                  vid.play();
-                }
-
-                function pauseVid() {
-                  vid.pause();
-                }
-                function muteVid() {
-                  if(vid.muted == true){
-                    mute.innerHTML = 'Mute';
-                    vid.muted = false;
-                  } else {
-                    mute.innerHTML = 'Unmute';
-                    vid.muted = true;
-                  }
-                }
-                play.addEventListener("click", playVid);
-                pause.addEventListener("click", pauseVid);
-                mute.addEventListener("click", muteVid);
-            </script>
-
-            </script>
-
-            <!-- Function to be Run on End of Video -->
-            <script>
-                document.getElementById('mainVideo').addEventListener('ended',afterVideo);
-                function lockOptions(){
-                    var options = document.getElementById('videoControls');
-                    // options.style.visibility= "hidden";
-                    // options.style.display = 'none';
-                }
-                function afterVideo() {
-                    lockOptions();
-                    var prm1 = document.getElementById('prompt1');
-                    prm1.style.display = "inline-flex";
-                    var prm2 = document.getElementById('prompt2');
-                    prm2.style.display = "inline-flex";
-                    var prm3 = document.getElementById('prompt3');
-                    prm3.style.display = "inline-flex";
-                    var prm4 = document.getElementById('prompt4');
-                    prm4.style.display = "inline-flex";
-                }
-            </script>
 
             <!-- Direction Prompt -->
 
