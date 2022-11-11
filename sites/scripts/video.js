@@ -1,57 +1,100 @@
-import bitches from './info.json' assert { type: "json"};
+import info from './info.json' assert { type: "json"};
 
-var test = bitches;
-console.log(test);
+var data = info;
 
-    
+// console.log(Object.keys(data));
+var keys = Object.keys(data);
+var choices = Object.values(data)
+// console.log(data['video1'])
+
+let test11 = [];
+for (const k in data)
+{
+    test11.push(k);
+}
+ 
 class Node {
     constructor(video)
     {
-        this.video = video;
-        this.choice1 = new Answer();
-        this.choice2 = null;
-        this.choice3 = null;
-        this.choice4 = null;
+        this.url = data[video].url;
+        this.choice1 = new Answer(video, 'choice1');
+        this.choice2 = new Answer(video, 'choice2');
+        this.choice3 = new Answer(video, 'choice3');
+        this.choice4 = new Answer(video, 'choice4');
     }    
 }
 
 class Answer {
 
-    constructor(choice, text, check = false)
+    constructor(videoNo, answerNo)
     {
-        this.choice = choice;
-        this.check = check;
-        this.text = text;
+        this.text = null;
+        this.tip = null;
+        this.progression = null;
+
+        for (const i in keys)
+        { 
+            let test = videoNo;
+            let test2 = answerNo;
+            if(keys[i] == test)
+            {
+                for (const j in data[keys[i]])
+                {
+                    if (j == test2)
+                    {
+                        this.text = data[keys[i]][j].text;
+                        this.tip = data[keys[i]][j].tip;
+                        this.progression = data[keys[i]][j].progression;
+                    }
+                }
+            }
+        }
     }
 }
 
+let test = new Node('video1')
+console.log(test)
+
 class LinkedList {
+
     constructor()
     {
         this.head = null;
-        this.tail = null;
+        this.next = null;
+        this.prev = null;
+    }
+
+    append(node) 
+    {
+        if (this.next == null)
+        {
+            this.next = node
+        }
+
+        else
+        {
+            this.next.append(node)
+        }
     }
 }
 
+
 var videoList = new LinkedList();
-videoList.head = new Node("../videos/1-Video.mp4");
-videoList.head.choice1 = new Node("../videos/2-Video.mp4");
-videoList.head.choice2 = new Node("../videos/3-Video.mp4");
-videoList.head.choice3 = new Node("../videos/4-Video.mp4");
-videoList.head.choice4 = new Node("../videos/5-Video.mp4");
+videoList.head = test;
+console.log(videoList.head);
 
 
 // alert(videoList.head.video);
 // alert(videoList.head.choice1.video);
 
+
 let currentVideo = videoList.head;
 
 
-function videoAppear(){
-    document.getElementById("mainVideo").src = currentVideo.video;
-    document.getElementById("gameScreen").style.visibility= "visible";
-    document.getElementById("videoControls").style.visibility= "visible"; 
-}
+
+document.getElementById("embedVideo").src = currentVideo.url;
+document.getElementById("gameScreen").style.visibility= "visible";
+document.getElementById("videoControls").style.visibility= "visible";
 
 // Get the modal
 var modal = document.getElementById("fileModal");
@@ -125,7 +168,7 @@ mute.addEventListener("click", muteVid);
 
 
 // Post video shit
-document.getElementById('mainVideo').addEventListener('ended',afterVideo);
+document.getElementById('embedVideo').addEventListener('ended',afterVideo);
 function lockOptions(){
     var options = document.getElementById('videoControls');
     // options.style.visibility= "hidden";
