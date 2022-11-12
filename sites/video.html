@@ -9,6 +9,16 @@
     <link rel="icon" type="image/x-icon" href="/images/clipboard.ico">
     <script defer src="../sites/video.js"></script>
 
+    <!-- <script>
+       var values = fetch("info.json")
+        .then(response => response.json())
+        .then(data => {
+            values = data; })
+        .catch(err => console.log(err));
+        // return values;
+        console.log(values)
+    </script> -->
+
 </head>
 
 <header class="header">
@@ -25,16 +35,22 @@
 </header>
 <br>
 
-<body onload=videoAppear()>
+<body>
 
         <!-- Game Screen (Includes Video, Video Controls, and File) -->
         <div id="gameScreen" class="game_screen">
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
             <video controls id="mainVideo" class="mainVideo" type="video/mp4">Your browser does not support HTML5 video.</video>
 =======
             <!-- <video controls id="mainVideo" class="mainVideo" type="video/mp4">Your browser does not support HTML5 video.</video> -->
 
             <iframe class="embedVideo" id="embedVideo" style="border:none;" width="640" height="480" allowfullscreen="true"></iframe>
+>>>>>>> Stashed changes
+=======
+            <!-- <video controls id="mainVideo" class="mainVideo" type="video/mp4">Your browser does not support HTML5 video.</video> -->
+
+            <iframe class="embedVideo" id="embedVideo" style="border:none;" src="https://drive.google.com/file/d/13U0KcfWsgn8ZbECGqqndGjXsuWA2VHw9/preview" width="640" height="480" allowfullscreen="true" allow="autoplay"></iframe>
 >>>>>>> Stashed changes
 
             <div id="videoControls" class="videoControls">
@@ -47,7 +63,6 @@
             <br>
 
             <div id="fileModal" class="modal">
-
                   <!-- Modal content -->
                 <div class="modal-content">
                     <div class="modal-header">
@@ -56,13 +71,36 @@
                     </div>
                         <div class="modal-body">
                             <img src="../images/file.png" id="modal_img"/>
-                    <!-- </div>
-                        <div class="modal-footer">
-                        <h3>Modal Footer</h3>
-                    </div> -->
                         </div>
 
                     </div>
+                
+                    <script>
+                        // Get the modal
+                        var modal = document.getElementById("fileModal");
+
+                        // Get the button that opens the modal
+                        var btn = document.getElementById("fileButton");
+                        // Get the <span> element that closes the modal
+                        var span = document.getElementsByClassName("close")[0];
+
+                        // When the user clicks on the button, open the modal
+                        btn.onclick = function() {
+                            modal.style.display = "block";
+                        }
+
+                        // When the user clicks on <span> (x), close the modal
+                        span.onclick = function() {
+                            modal.style.display = "none";
+                        }
+
+                        // When the user clicks anywhere outside of the modal, close it
+                        window.onclick = function(event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                    </script>
               
             </div>
 

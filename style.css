@@ -112,8 +112,20 @@ body {
   margin-right: auto;
   border-radius: 25px;
   margin-bottom: 0;
-
 }
+
+.embedVideo {
+  min-width: 10%;
+  max-width: 70%;
+  margin-top: 50px;
+  position: relative;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  margin-bottom: 0;
+}
+
 .playButton {
   position:relative;
   background: none;
@@ -149,9 +161,7 @@ body {
   /* display: inline-block; */
   z-index: 5;
   min-width: 20%;
-  max-width: 70%;
-  /* width: auto; */
-  width: 480px;
+  max-width: 80%;
   border-radius: 0px 0px 25px 25px;
   padding: 5px;
   background-color: #ffffff;
