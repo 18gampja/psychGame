@@ -53,6 +53,10 @@ class Answer {
 }
 
 let test = new Node('video1')
+test.Node('video2')
+test.Node('video3')
+test.Node('video4')
+test.Node("video5")
 console.log(test)
 
 class LinkedList {
@@ -92,7 +96,7 @@ let currentVideo = videoList.head;
 
 
 
-document.getElementById("embedVideo").src = currentVideo.url;
+document.getElementById("mainVideo").src = currentVideo.url;
 document.getElementById("gameScreen").style.visibility= "visible";
 document.getElementById("videoControls").style.visibility= "visible";
 
@@ -168,7 +172,7 @@ mute.addEventListener("click", muteVid);
 
 
 // Post video shit
-document.getElementById('embedVideo').addEventListener('ended',afterVideo);
+document.getElementById('mainVideo').addEventListener('ended',afterVideo);
 function lockOptions(){
     var options = document.getElementById('videoControls');
     // options.style.visibility= "hidden";
