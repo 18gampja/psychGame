@@ -179,6 +179,7 @@ capBtn.onclick = function()
 {
     videoList.previous()
     document.getElementById("tip").style.visibility = "hidden";
+    clearAnswers()
 }
 // Get the modal
 var modal = document.getElementById("fileModal");
@@ -255,6 +256,15 @@ function muteVid() {
     vid.muted = true;
     }
 }
+
+// Clear Answer Colors on progression and regression
+function clearAnswers() {
+    prm1.style.backgroundColor = "#FFFFFF";
+    prm2.style.backgroundColor = "#FFFFFF";
+    prm3.style.backgroundColor = "#FFFFFF";
+    prm4.style.backgroundColor = "#FFFFFF";
+}
+
 play.addEventListener("click", playVid);
 pause.addEventListener("click", pauseVid);
 mute.addEventListener("click", muteVid);
@@ -339,6 +349,7 @@ function direction1(){
     if (currentVideo.choice1.progression == 'True')
     {
         videoList.progress()
+        clearAnswers()
     }
 
     unlockOptions();
@@ -358,6 +369,7 @@ function direction2(){
     if (currentVideo.choice2.progression == 'True')
     {
         videoList.progress()
+        clearAnswers()
     }
 
     unlockOptions();
@@ -377,6 +389,7 @@ function direction3(){
     if (currentVideo.choice3.progression == 'True')
     {
         videoList.progress()
+        clearAnswers()
     }
     
     unlockOptions();
@@ -396,6 +409,7 @@ function direction4(){
     if (currentVideo.choice4.progression == 'True')
     {
         videoList.progress()
+        clearAnswers()
     }
 
     unlockOptions();
