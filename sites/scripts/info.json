@@ -1,0 +1,101 @@
+{
+    "video1" :
+        {
+            "url" : "13U0KcfWsgn8ZbECGqqndGjXsuWA2VHw9",
+            "choice1" : {"text" : "Let Ms. Jones know that participation is entirely voluntary.", 
+                        "progression" : "False", 
+                        "tip" : "Not the worst response.  What else can you say to Mrs. Jones to facilitate a home visit?"},
+
+            "choice2" : {"text" : "Remind Ms. Jones that she already agreed to the appointment.", 
+                        "progression" : "False", 
+                        "tip" : "Not a good response!  How might you deliver this message differently?"},
+
+            "choice3" : {"text" : "Let Ms. Jones know about the benefits of your program.", 
+                        "progression" : "True", 
+                        "tip" : "Good!  This response is less likely to elicit a defensive response from the client while continuing to allow her a choice to participate."},
+
+            "choice4" : {"text" : "Allow Ms. Jones more time to think about it and call her back later.", 
+                        "progression" : "False", 
+                        "tip" : "Not the worst response.  What else can you say to Mrs. Jones to facilitate a home visit?"}
+        },
+
+    "video2" : 
+        {
+            "url" : "1c3XroOQSs6GbELasdGX7oN1z25UrNpt2",
+            "choice1" : {"text" : "Ask Ms. Jones where she prefers to sit.", 
+                        "progression" : "False", 
+                        "tip" : "Not the worst response.  Are there any potential problems with this?"},
+
+            "choice2" : {"text" : "Request a quiet area, such as a bedroom.", 
+                        "progression" : "False", 
+                        "tip" : "Not a good response!  Why might it not be appropriate to meet a client in a bedroom?"},
+
+            "choice3" : {"text" : "ANSWER TBD", 
+                        "progression" : "False", 
+                        "tip" : "gabbagool"},
+
+            "choice4" : {"text" : "Although in a common area, suggest the kitchen or dining room table.", 
+                        "progression" : "True", 
+                        "tip" : "Good!  This response allows the case manager to meet in a neutral part of the home away from distractions while having an area to take notes."}
+        },
+
+    "video3" : 
+        {
+            "url" : "dummyurl1.com",
+            "choice1" : {"text" : "TBD", 
+                        "progression" : "False", 
+                        "tip" : "TBD"},
+
+            "choice2" : {"text" : "TBD", 
+                        "progression" : "False", 
+                        "tip" : "TBD"},
+
+            "choice3" : {"text" : "ANSWER TBD", 
+                        "progression" : "False", 
+                        "tip" : "TBD"},
+
+            "choice4" : {"text" : "TBD", 
+                        "progression" : "True", 
+                        "tip" : "TBD"}
+        },
+
+    "video4" : 
+        {
+            "url" : "dummyurl2.com",
+            "choice1" : {"text" : "TBD", 
+                        "progression" : "False", 
+                        "tip" : "TBD"},
+
+            "choice2" : {"text" : "TBD", 
+                        "progression" : "False", 
+                        "tip" : "TBD"},
+
+            "choice3" : {"text" : "ANSWER TBD", 
+                        "progression" : "False", 
+                        "tip" : "TBD"},
+
+            "choice4" : {"text" : "TBD", 
+                        "progression" : "True", 
+                        "tip" : "TBD"}
+        },
+
+    "video5" : 
+        {
+            "url" : "dummyurl3.com",
+            "choice1" : {"text" : "TBD", 
+                        "progression" : "False", 
+                        "tip" : "TBD"},
+
+            "choice2" : {"text" : "TBD", 
+                        "progression" : "False", 
+                        "tip" : "TBD"},
+
+            "choice3" : {"text" : "ANSWER TBD", 
+                        "progression" : "False", 
+                        "tip" : "TBD"},
+
+            "choice4" : {"text" : "TBD", 
+                        "progression" : "True", 
+                        "tip" : "TBD"}
+        }
+}
