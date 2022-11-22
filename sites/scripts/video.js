@@ -1,28 +1,47 @@
+// Importing the json file and initializing the information in a way we can read it
+// This was stupid and I hated it
+
 import info from './info.json' assert { type: "json"};
 
 var data = info;
 
-// console.log(Object.keys(data));
 var keys = Object.keys(data);
-var choices = Object.values(data)
-// console.log(data['video1'])
 
-let test11 = [];
+let vids = []
 for (const k in data)
 {
-    test11.push(k);
+    vids.push(k);
 }
  
+
+// I implemented the list dumb, but the node itself is everything we need for the video player basically
+// It uses the info parsed from the json file, eat my dick manual coding
+
 class Node {
-    constructor(video)
+    constructor(video = null)
     {
-        this.url = data[video].url;
-        this.choice1 = new Answer(video, 'choice1');
-        this.choice2 = new Answer(video, 'choice2');
-        this.choice3 = new Answer(video, 'choice3');
-        this.choice4 = new Answer(video, 'choice4');
+        if (video != null)
+        {
+            this.url = "https://drive.google.com/uc?export=download&id=" + data[video].url;
+            this.choice1 = new Answer(video, 'choice1');
+            this.choice2 = new Answer(video, 'choice2');
+            this.choice3 = new Answer(video, 'choice3');
+            this.choice4 = new Answer(video, 'choice4');
+        }
+        
+        else
+        {
+            this.url = null;
+            this.choice1 = null;
+            this.choice2 = null;
+            this.choice3 = null;
+            this.choice4 = null;
+        }
     }    
 }
+
+// This is the class for answers. This is used by the Node class. It parses the json info and pairs everything up
+// in a way that is pleasing to the balls resting in your brain sockets.
 
 class Answer {
 
@@ -34,13 +53,13 @@ class Answer {
 
         for (const i in keys)
         { 
-            let test = videoNo;
-            let test2 = answerNo;
-            if(keys[i] == test)
+            let vidNo = videoNo;
+            let ansNo = answerNo;
+            if(keys[i] == vidNo)
             {
                 for (const j in data[keys[i]])
                 {
-                    if (j == test2)
+                    if (j == ansNo)
                     {
                         this.text = data[keys[i]][j].text;
                         this.tip = data[keys[i]][j].tip;
@@ -52,23 +71,40 @@ class Answer {
     }
 }
 
-let test = new Node('video1')
-console.log(test)
+// Here's the linked list. It's mostly untouched honestly, but I added some functions
+// to the class itself. It should completely automate adding shit to the list, as well 
+// as traversal forward and backward.
 
 class LinkedList {
 
-    constructor()
+    constructor(node = null, prev = null)
     {
-        this.head = null;
-        this.next = null;
-        this.prev = null;
+        if (node != null)
+        {
+            this.head = node;
+            this.next = null;
+            this.prev = prev;
+        }
+
+        else
+        {
+            this.head = null;
+            this.next = null;
+            this.prev = null;  
+        }
+        
     }
 
     append(node) 
     {
-        if (this.next == null)
+        if (this.head == null)
         {
-            this.next = node
+            this.head = node
+        }
+
+        else if(this.next == null)
+        {
+            this.next = new LinkedList(node, this)
         }
 
         else
@@ -76,26 +112,73 @@ class LinkedList {
             this.next.append(node)
         }
     }
+
+    progress()
+    {
+        if (this.next != null)
+        {
+            videoList = this.next
+            currentVideo = videoList.head
+            prm1.style.display = "none";
+            prm2.style.display = "none";
+            prm3.style.display = "none";
+            prm4.style.display = "none";
+            updateVid()
+        }
+    }
+
+    previous()
+    {
+        if (this.prev != null)
+        {
+            videoList = this.prev
+            currentVideo = videoList.head
+            prm1.style.display = "none";
+            prm2.style.display = "none";
+            prm3.style.display = "none";
+            prm4.style.display = "none";
+            updateVid()
+        }
+    }
 }
 
+// Initializing the linked list. We parse through the "video titles" to access the json file,
+// then create the nodes, then insert the nodes. Eat my dick manual coding.
 
-var videoList = new LinkedList();
-videoList.head = test;
-console.log(videoList.head);
+let videoList = new LinkedList()
 
+for (let i = 0; i < vids.length; i ++)
+{
 
-// alert(videoList.head.video);
-// alert(videoList.head.choice1.video);
+    let newVid = new Node(vids[i])
+    
+    if (videoList.head == null)
+    {
+        videoList.head = newVid
+    }
 
+    else
+    {
+        videoList.append(newVid)
+    }
+    
+}
 
+// Pointing to the current video. 
 let currentVideo = videoList.head;
 
+// HTML is stupid
+updateVid()
 
 
-document.getElementById("embedVideo").src = currentVideo.url;
-document.getElementById("gameScreen").style.visibility= "visible";
-document.getElementById("videoControls").style.visibility= "visible";
+// Get Caption button. Temporarily houses the "Previous Video" function
 
+var capBtn = document.getElementById("captionButton");
+
+capBtn.onclick = function()
+{
+    videoList.previous()
+}
 // Get the modal
 var modal = document.getElementById("fileModal");
 
@@ -122,7 +205,7 @@ window.onclick = function(event) {
 }
 
 // Video controls
-var vid = document.getElementById('mainVideo');
+var vid = document.getElementById('embedVideo');
 var supposedCurrentTime = 0;
 vid.addEventListener('timeupdate', function() {
     if (!vid.seeking) {
@@ -143,6 +226,16 @@ vid.addEventListener('ended', function() {
 var pause = document.getElementById("pauseVideoButton");
 var mute = document.getElementById("muteVideoButton");
 var play = document.getElementById("playVideoButton");
+
+
+// HTML is really stupid 
+
+function updateVid()
+{
+    document.getElementById("embedVideo").src = currentVideo.url;
+    document.getElementById("gameScreen").style.visibility= "visible";
+    document.getElementById("videoControls").style.visibility= "visible";
+}
 
 function playVid() {
     vid.play();
@@ -171,22 +264,28 @@ mute.addEventListener("click", muteVid);
 document.getElementById('embedVideo').addEventListener('ended',afterVideo);
 function lockOptions(){
     var options = document.getElementById('videoControls');
-    // options.style.visibility= "hidden";
-    // options.style.display = 'none';
 }
 
 function afterVideo() {
     lockOptions();
     var prm1 = document.getElementById('prompt1');
+    prm1.textContent = currentVideo.choice1.text
     prm1.style.display = "inline-flex";
-    var prm2 = document.getElementById('prompt2');
-    prm2.style.display = "inline-flex";
-    var prm3 = document.getElementById('prompt3');
-    prm3.style.display = "inline-flex";
-    var prm4 = document.getElementById('prompt4');
-    prm4.style.display = "inline-flex";
-}
 
+    var prm2 = document.getElementById('prompt2');
+    prm2.textContent = currentVideo.choice2.text
+    prm2.style.display = "inline-flex";
+
+    var prm3 = document.getElementById('prompt3');
+    prm3.textContent = currentVideo.choice3.text
+    prm3.style.display = "inline-flex";
+
+    var prm4 = document.getElementById('prompt4');
+    prm4.textContent = currentVideo.choice4.text
+    prm4.style.display = "inline-flex";
+
+    
+}
 
 // Choice controls
 document.getElementById("prompt1").addEventListener("click", direction1);
@@ -218,11 +317,13 @@ if(currentVideo.choice4) {
     document.getElementById("prompt4").style.visibility= "visible";
 }
 
+// I updated these briefly to work with the new linked list
+// and information storage system. Gratiously, this did not require much change.
+
 function direction1(){
-    // alert('Direction 1!');
     
     prm1.style.backgroundColor = "#de821f"; //OK respone 
-    tip.textContent = 'Not the worst response.  What else can you say to Mrs. Jones to facilitate a home visit?';
+    tip.textContent = currentVideo.choice1.tip;
     tip.style.visibility = "visible";
     
     prm1.style.display = "none";
@@ -230,18 +331,18 @@ function direction1(){
     prm3.style.display = "none";
     prm4.style.display = "none";
 
+    if (currentVideo.choice1.progression == 'True')
+    {
+        videoList.progress()
+    }
+
     unlockOptions();
-
-    // currentVideo = currentVideo.choice1;
-    // document.getElementById("mainVideo").src = currentVideo.video;
-
 }
 
 function direction2(){
-    // alert('Direction 2!');
     
     prm2.style.backgroundColor = "#bd0f0f"; //BAD respone 
-    tip.textContent = 'Not a good response!  How might you deliver this message differently?';
+    tip.textContent = currentVideo.choice2.tip;
     tip.style.visibility = "visible";
     
     prm1.style.display = "none";
@@ -249,17 +350,18 @@ function direction2(){
     prm3.style.display = "none";
     prm4.style.display = "none";
 
-    unlockOptions();
+    if (currentVideo.choice2.progression == 'True')
+    {
+        videoList.progress()
+    }
 
-    // currentVideo = currentVideo.choice2;
-    // document.getElementById("mainVideo").src = currentVideo.video;
+    unlockOptions();
 }
 
 function direction3(){
-    // alert('Direction 3!');
     
     prm3.style.backgroundColor = "#44f50f"; //GOOD respone 
-    tip.textContent = 'Good!  This response is less likely to elicit a defensive response from the client while continuing to allow her a choice to participate.';
+    tip.textContent = currentVideo.choice3.tip;
     tip.style.visibility = "visible";
     
     prm1.style.display = "none";
@@ -267,17 +369,18 @@ function direction3(){
     prm3.style.display = "none";
     prm4.style.display = "none";
 
+    if (currentVideo.choice3.progression == 'True')
+    {
+        videoList.progress()
+    }
+    
     unlockOptions();
-
-    currentVideo = currentVideo.choice3;
-    document.getElementById("mainVideo").src = currentVideo.video;
 }
 
 function direction4(){
-    // alert('Direction 4!');
 
     prm4.style.backgroundColor = "#de821f"; //OK respone 
-    tip.textContent = 'Not the worst response.  What else can you say to Mrs. Jones to facilitate a home visit?';
+    tip.textContent = currentVideo.choice4.tip;
     tip.style.visibility = "visible";
     
     prm1.style.display = "none";
@@ -285,10 +388,13 @@ function direction4(){
     prm3.style.display = "none";
     prm4.style.display = "none";
 
-    unlockOptions();
+    if (currentVideo.choice4.progression == 'True')
+    {
+        videoList.progress()
+    }
 
-    // currentVideo = currentVideo.choice4;
-    // document.getElementById("mainVideo").src = currentVideo.video;
+    unlockOptions();
 }
 // End choice controls
 
+// 400 lines bitch
