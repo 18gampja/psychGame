@@ -1,11 +1,13 @@
 /* Set page color NOT including header */
 body { 
+  height: 100vh;
   margin: 0;
   font-family: Helvetica, sans-serif;
   align-items: center;
   justify-content: center;
 
-  background-color: #5664a5;
+  /* background-color: #5664a5; */
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
   background-image: url("images/philly_compressed.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -87,7 +89,7 @@ body {
   margin-bottom: 5px;
 }
 
-.pathSelector {
+.pathSelector{
   width: auto;
   /* margin-top: 20px; */
   margin: 2px;
@@ -135,7 +137,7 @@ body {
 .videoControls{
   position: relative;
   /* display: inline-block; */
-  z-index: 5;
+  /* z-index: 5; */
   min-width: 20%;
   max-width: 70%;
   /* width: auto; */

@@ -178,6 +178,7 @@ var capBtn = document.getElementById("captionButton");
 capBtn.onclick = function()
 {
     videoList.previous()
+    document.getElementById("tip").style.visibility = "hidden";
 }
 // Get the modal
 var modal = document.getElementById("fileModal");
@@ -268,21 +269,25 @@ function lockOptions(){
 
 function afterVideo() {
     lockOptions();
-    var prm1 = document.getElementById('prompt1');
-    prm1.textContent = currentVideo.choice1.text
+    var prm1 = document.getElementById('prompt1'); prompt_h1
+    var prm1_h1 = document.getElementById('prompt_h1');
     prm1.style.display = "inline-flex";
+    prm1_h1.innerHTML = currentVideo.choice1.text
 
     var prm2 = document.getElementById('prompt2');
-    prm2.textContent = currentVideo.choice2.text
+    var prm2_h1 = document.getElementById('prompt_h2');
     prm2.style.display = "inline-flex";
+    prm2_h1.innerHTML = currentVideo.choice2.text
 
     var prm3 = document.getElementById('prompt3');
-    prm3.textContent = currentVideo.choice3.text
+    var prm3_h1 = document.getElementById('prompt_h3');
     prm3.style.display = "inline-flex";
+    prm3_h1.innerHTML = currentVideo.choice3.text
 
     var prm4 = document.getElementById('prompt4');
-    prm4.textContent = currentVideo.choice4.text
+    var prm4_h1 = document.getElementById('prompt_h4');
     prm4.style.display = "inline-flex";
+    prm4_h1.innerHTML = currentVideo.choice4.text
 
     
 }
