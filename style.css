@@ -516,12 +516,12 @@ span.psw {
   flex-wrap: wrap;
   background-color: grey;
   border-radius: 15px 15px 15px 15px;
-  justify-content: left;
+  justify-content: center;
 }
 
 .dev-container {
   width: auto;
-  margin: 10px;
+  margin: 2vw;
   padding: 20px;
   inline-size: 250px;
   text-align: center;
@@ -533,6 +533,18 @@ span.psw {
 
   text-align: center;
   align-items: center;
+}
+
+#continueButton {
+  background-color: #ffffff;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 15px 15px 15px 15px;
+
 }
 
 
