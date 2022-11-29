@@ -388,6 +388,7 @@ function direction3(){
 
     if (currentVideo.choice3.progression == 'True')
     {
+        document.getElementById("continueButton").style.visibility = "visible";
         videoList.progress()
         clearAnswers()
     }
