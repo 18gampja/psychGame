@@ -1,11 +1,18 @@
 /* Set page color NOT including header */
+* {
+  box-sizing: border-box;
+}
+
 body { 
+  height: 100%;
+  width: 100%;
   margin: 0;
   font-family: Helvetica, sans-serif;
   align-items: center;
   justify-content: center;
 
-  background-color: #5664a5;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  /* box-shadow: inset 0 0 0 999em rgba(0, 0, 0, 0.5); */
   background-image: url("images/philly_compressed.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,11 +32,38 @@ body {
 }
 
 .headshot {
-  padding-top: 50px;
+  margin-right: 1vh;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 300px;
+  margin-left: 2%;
+  /* margin-left: 25%; */
+  /* margin-right: auto; */
+  height: 25vh;
+  border: 5px solid #e4630d;
+  border-radius: 25px;
+}
+
+.imgDiv {
+  padding-top: 1vh;
+}
+
+.headshotAbout {
+  /* text-align: center; */
+  font-family: "Verdana";
+  font-size:calc(20 + 1vw);
+  font-weight: 900;
+  color: white;
+  margin-right: 2%;
+  border-radius: 25px;
+  padding: 20px;
+  background-color: grey;
+  inline-size: 50%;
+  overflow-wrap: break-word;
+  width: 100%;
+  justify-content: left;
+  
+
+  /* position: relative; */
+  z-index: 3;
 }
 
 .aboutPanel {
@@ -39,30 +73,35 @@ body {
   font-weight: 900;
   /* text-shadow: -1px -1px 0 #FFFFFF; */
   color: white;
-  margin-left: auto;
+  /* margin-left: auto; */
   margin-right: auto;
   border-radius: 25px;
   padding: 20px;
-  background-color: #315cb9;
+  /* background-color: #315cb9; */
+  background-color: grey;
 
-  position: relative;;
+  position: relative;
   z-index: 3;
 }
 
 .aboutText {
-  text-align: center;
   font-family: "Verdana";
   font-size:calc(20 + 1vw);
   font-weight: 900;
   /* text-shadow: -1px -1px 0 #FFFFFF; */
   color: white;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto; */
+  margin-left: 2%;
+  margin-right: 2%;
+  /* margin-right: auto; */
   border-radius: 25px;
   padding: 20px;
-  background-color: #8c2da8;
+  /* background-color: #8c2da8; */
+  background-color: grey;
   inline-size: 50%;
   overflow-wrap: break-word;
+  width: 96%;
+  justify-content: left;
 
   /* position: relative; */
   z-index: 3;
@@ -71,6 +110,14 @@ body {
 .aboutText a {
   /* color: #ab7d00; */
   color: #e3c164;
+}
+
+.aboutText li {
+  text-align: justify;
+}
+
+.aboutText dd {
+  text-align: justify;
 }
 
 .tipPopup {
@@ -89,9 +136,10 @@ body {
 
 .pathSelector {
   width: auto;
+  height: 10vh;
   /* margin-top: 20px; */
   margin: 2px;
-  inline-size: 150px;
+  inline-size: 200px;
   overflow-wrap: break-word;
   border-radius: 15px 15px 15px 15px;
   background-color: #fcfcfc;
@@ -100,6 +148,7 @@ body {
   position: relative;
   z-index: 5;
   text-align: center;
+  align-items: center;
 }
 
 .playButton {
@@ -135,7 +184,7 @@ body {
 .videoControls{
   position: relative;
   /* display: inline-block; */
-  z-index: 5;
+  /* z-index: 5; */
   min-width: 20%;
   max-width: 70%;
   /* width: auto; */
@@ -452,10 +501,39 @@ span.psw {
   min-width: 20%;
   max-width: 60%;
   margin-top: 50px;
-  position: relative;
+  /* position: relative; */
   display: flex;
   margin-left: auto;
   margin-right: auto;
   border-radius: 25px;
   margin-bottom: 0;
 }
+
+.aboutDiv {
+  margin-left: 2%;
+  margin-right: 2%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  background-color: grey;
+  border-radius: 15px 15px 15px 15px;
+  justify-content: left;
+}
+
+.dev-container {
+  width: auto;
+  margin: 10px;
+  padding: 20px;
+  inline-size: 250px;
+  text-align: center;
+  flex-direction: column;
+  overflow-wrap: break-word;
+  z-index: 3;
+  position: relative;
+  
+
+  text-align: center;
+  align-items: center;
+}
+
+
+

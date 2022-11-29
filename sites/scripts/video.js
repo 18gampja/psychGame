@@ -182,6 +182,8 @@ var capBtn = document.getElementById("captionButton");
 capBtn.onclick = function()
 {
     videoList.previous()
+    document.getElementById("tip").style.visibility = "hidden";
+    clearAnswers()
 }
 // Get the modal
 var modal = document.getElementById("fileModal");
@@ -258,6 +260,15 @@ function muteVid() {
     vid.muted = true;
     }
 }
+
+// Clear Answer Colors on progression and regression
+function clearAnswers() {
+    prm1.style.backgroundColor = "#FFFFFF";
+    prm2.style.backgroundColor = "#FFFFFF";
+    prm3.style.backgroundColor = "#FFFFFF";
+    prm4.style.backgroundColor = "#FFFFFF";
+}
+
 play.addEventListener("click", playVid);
 pause.addEventListener("click", pauseVid);
 mute.addEventListener("click", muteVid);
@@ -272,21 +283,25 @@ function lockOptions(){
 
 function afterVideo() {
     lockOptions();
-    var prm1 = document.getElementById('prompt1');
-    prm1.textContent = currentVideo.choice1.text
+    var prm1 = document.getElementById('prompt1'); prompt_h1
+    var prm1_h1 = document.getElementById('prompt_h1');
     prm1.style.display = "inline-flex";
+    prm1_h1.innerHTML = currentVideo.choice1.text
 
     var prm2 = document.getElementById('prompt2');
-    prm2.textContent = currentVideo.choice2.text
+    var prm2_h1 = document.getElementById('prompt_h2');
     prm2.style.display = "inline-flex";
+    prm2_h1.innerHTML = currentVideo.choice2.text
 
     var prm3 = document.getElementById('prompt3');
-    prm3.textContent = currentVideo.choice3.text
+    var prm3_h1 = document.getElementById('prompt_h3');
     prm3.style.display = "inline-flex";
+    prm3_h1.innerHTML = currentVideo.choice3.text
 
     var prm4 = document.getElementById('prompt4');
-    prm4.textContent = currentVideo.choice4.text
+    var prm4_h1 = document.getElementById('prompt_h4');
     prm4.style.display = "inline-flex";
+    prm4_h1.innerHTML = currentVideo.choice4.text
 
     
 }
@@ -338,6 +353,7 @@ function direction1(){
     if (currentVideo.choice1.progression == 'True')
     {
         videoList.progress()
+        clearAnswers()
     }
 
     unlockOptions();
@@ -357,6 +373,7 @@ function direction2(){
     if (currentVideo.choice2.progression == 'True')
     {
         videoList.progress()
+        clearAnswers()
     }
 
     unlockOptions();
@@ -375,7 +392,9 @@ function direction3(){
 
     if (currentVideo.choice3.progression == 'True')
     {
+        document.getElementById("continueButton").style.visibility = "visible";
         videoList.progress()
+        clearAnswers()
     }
     
     unlockOptions();
@@ -395,6 +414,7 @@ function direction4(){
     if (currentVideo.choice4.progression == 'True')
     {
         videoList.progress()
+        clearAnswers()
     }
 
     unlockOptions();
