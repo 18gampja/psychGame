@@ -12,6 +12,8 @@ for (const k in data)
 {
     vids.push(k);
 }
+
+console.log(vids)
  
 
 // I implemented the list dumb, but the node itself is everything we need for the video player basically
@@ -163,6 +165,8 @@ for (let i = 0; i < vids.length; i ++)
     }
     
 }
+
+console.log(videoList)
 
 // Pointing to the current video. 
 let currentVideo = videoList.head;
