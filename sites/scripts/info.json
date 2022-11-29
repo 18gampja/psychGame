@@ -41,7 +41,7 @@
 
     "video3" : 
         {
-            "url" : "dummyurl1.com",
+            "url" : "1gq8mh1YFomqXXIwSHqmYccQdxkRdMOrx",
             "choice1" : {"text" : "TBD", 
                         "progression" : "False", 
                         "tip" : "TBD"},
@@ -82,6 +82,66 @@
     "video5" : 
         {
             "url" : "dummyurl3.com",
+            "choice1" : {"text" : "TBD", 
+                        "progression" : "False", 
+                        "tip" : "TBD"},
+
+            "choice2" : {"text" : "TBD", 
+                        "progression" : "False", 
+                        "tip" : "TBD"},
+
+            "choice3" : {"text" : "ANSWER TBD", 
+                        "progression" : "False", 
+                        "tip" : "TBD"},
+
+            "choice4" : {"text" : "TBD", 
+                        "progression" : "True", 
+                        "tip" : "TBD"}
+        },
+
+        "video6" : 
+        {
+            "url" : "dummyurl2.com",
+            "choice1" : {"text" : "TBD", 
+                        "progression" : "False", 
+                        "tip" : "TBD"},
+
+            "choice2" : {"text" : "TBD", 
+                        "progression" : "False", 
+                        "tip" : "TBD"},
+
+            "choice3" : {"text" : "ANSWER TBD", 
+                        "progression" : "False", 
+                        "tip" : "TBD"},
+
+            "choice4" : {"text" : "TBD", 
+                        "progression" : "True", 
+                        "tip" : "TBD"}
+        },
+
+        "video7" : 
+        {
+            "url" : "dummyurl2.com",
+            "choice1" : {"text" : "TBD", 
+                        "progression" : "False", 
+                        "tip" : "TBD"},
+
+            "choice2" : {"text" : "TBD", 
+                        "progression" : "False", 
+                        "tip" : "TBD"},
+
+            "choice3" : {"text" : "ANSWER TBD", 
+                        "progression" : "False", 
+                        "tip" : "TBD"},
+
+            "choice4" : {"text" : "TBD", 
+                        "progression" : "True", 
+                        "tip" : "TBD"}
+        },
+
+        "video8" : 
+        {
+            "url" : "dummyurl2.com",
             "choice1" : {"text" : "TBD", 
                         "progression" : "False", 
                         "tip" : "TBD"},
