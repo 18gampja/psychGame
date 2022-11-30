@@ -43,7 +43,7 @@
 
     "video3" : 
         {
-            "url" : "1gq8mh1YFomqXXIwSHqmYccQdxkRdMOrx",
+            "url" : "dummyurl1.com",
             "choice1" : {"text" : "Tell Ms. Jones there is no need to meet with Nelson.",
                         "progression" : "False", 
                         "tip" : "Not a good response!  Can you think of any reasons why it would be necessary to meet with Nelson?"},
@@ -52,7 +52,7 @@
                         "progression" : "True",
                         "tip" : "Good!  Why is it important to meet with Ms. Jones and Nelson?"},
 
-            "choice3" : {"text" : "Meet with Nelson only.",
+            "choice3" : {"text" : "Meet with Nelson only",
                         "progression" : "False", 
                         "tip" : "Not a good response!  Can you think of any reasons why it would be necessary to meet with Ms. Jones?"},
 
