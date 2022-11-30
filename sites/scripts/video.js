@@ -73,18 +73,9 @@ class Answer {
     }
 }
 
-<<<<<<< HEAD
-let test = new Node('video1')
-test.Node('video2')
-test.Node('video3')
-test.Node('video4')
-test.Node("video5")
-console.log(test)
-=======
 // Here's the linked list. It's mostly untouched honestly, but I added some functions
 // to the class itself. It should completely automate adding shit to the list, as well 
 // as traversal forward and backward.
->>>>>>> Jacob's-Branch
 
 class LinkedList {
 
@@ -178,13 +169,7 @@ let currentVideo = videoList.head;
 updateVid()
 
 
-<<<<<<< HEAD
-document.getElementById("mainVideo").src = currentVideo.url;
-document.getElementById("gameScreen").style.visibility= "visible";
-document.getElementById("videoControls").style.visibility= "visible";
-=======
 // Get Caption button. Temporarily houses the "Previous Video" function
->>>>>>> Jacob's-Branch
 
 var capBtn = document.getElementById("captionButton");
 
@@ -293,7 +278,7 @@ mute.addEventListener("click", muteVid);
 
 
 // Post video shit
-document.getElementById('mainVideo').addEventListener('ended',afterVideo);
+document.getElementById('embedVideo').addEventListener('ended',afterVideo);
 function lockOptions(){
     var options = document.getElementById('videoControls');
 }
