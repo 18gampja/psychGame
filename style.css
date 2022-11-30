@@ -136,10 +136,10 @@ body {
 
 .pathSelector {
   width: auto;
-  height: 10vh;
+  height: 150px;
   /* margin-top: 20px; */
   margin: 2px;
-  inline-size: 200px;
+  inline-size: 150px;
   overflow-wrap: break-word;
   border-radius: 15px 15px 15px 15px;
   background-color: #fcfcfc;
@@ -148,7 +148,7 @@ body {
   position: relative;
   z-index: 5;
   text-align: center;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .playButton {
@@ -501,7 +501,7 @@ span.psw {
   min-width: 20%;
   max-width: 60%;
   margin-top: 50px;
-  /* position: relative; */
+  /* position: fixed; */
   display: flex;
   margin-left: auto;
   margin-right: auto;
@@ -544,5 +544,12 @@ span.psw {
   display: inline-block;
   font-size: 16px;
   border-radius: 15px 15px 15px 15px;
+  /* display: flex;
+  justify-content: center; */
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 
+.button-center {
+  text-align: center;
 }
