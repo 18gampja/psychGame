@@ -547,6 +547,27 @@ span.psw {
   color: white;
 }
 
+.finishButton {
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  inline-size: 150px;
+  text-align: center;
+  align-content: center;
+  /* margin-top: 80%; */
+  margin-top: -20%;
+  z-index: 100;
+  /* float: right; */
+  /* clear: both; */
+  /* margin: 20px; */
+  background-color: green;
+  border: 3px solid black;
+  border-radius: 15px 15px 15px 15px;
+  padding: 15px 32px;
+}
+
 .embedVideo {
   min-width: 20%;
   max-width: 50vw;
@@ -559,6 +580,7 @@ span.psw {
   border-radius: 25px;
   margin-bottom: 0;
   border: 5px solid black;
+  box-shadow: 0 0 1px 0px black inset, 0 0 1px 0px black;
 }
 
 .aboutDiv {
@@ -594,7 +616,8 @@ span.psw {
 }
 
 #continueButton {
-  background-color: bisque;
+  background-color: white;
+  border-radius: 15px 15px 15px 15px;
   /* color: black; */
   padding: 15px 32px;
   text-align: center;
@@ -704,14 +727,3 @@ span.psw {
   transition: 0.75s all ease;
 }
 
-.videoControls_light {
-  /* color: black; */
-  background-color: rgb(255, 255, 255);
-  transition: 0.75s all ease;
-}
-
-.videoControls_dark {
-  /* color: white; */
-  background-color: rgb(0, 0, 0);
-  transition: 0.75s all ease;
-}

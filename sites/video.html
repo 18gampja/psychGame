@@ -22,7 +22,7 @@
       <li><a href="about.html">About</a></li>
       <li><a href="video.html">Play Game</a></li>
       <!-- <li><a href="login.html">Login</a></li> -->
-      <li>
+      <!-- <li>
         <div class="switch_container">
             <div class="switch">
                 <label for="toggle">
@@ -32,20 +32,23 @@
                 </label>
             </div>
         </div>
-      </li>
+      </li> -->
     </ul>
 </header>
 <br>
 
 <body>
-
+    
         <!-- Game Screen (Includes Video, Video Controls, and File) -->
         <div id="gameScreen" class="game_screen">
+        
 
             <video playsinline controls id="embedVideo" class="embedVideo" type="video/mp4">
                 Your Browser Doesn't Support HTML5
-            </video>
+            </video>      
+            <div class="finishButton" style="visibility: hidden">Finish</div>         
 
+        
             <div id="videoControls" class="videoControls">
                 <button id="playVideoButton" class="playButton">Play</button>
                 <button id="pauseVideoButton" class="pauseButton">Pause</button>

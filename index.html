@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Couch Counseling</title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="../style.css"/>
     <link rel="icon" type="image/x-icon" href="/images/clipboard.ico">
 
 </head>
 
-<header class="header">
+<header class="header" style="position: relative">
     <a class="logo" href='index.html'>Couch Counseling</a>
     <input class="menu-btn" type="checkbox" id="menu-btn" />
     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
@@ -18,8 +18,8 @@
       <!-- <li><a href="index.html">Our Work</a></li> -->
       <li><a href="sites/about.html">About</a></li>
       <li><a href="sites/video.html">Play Game</a></li>
-      <!-- <li><a href="sites/login.html">Login</a></li> -->
-      <li>
+      <!-- <li><a href="login.html">Login</a></li> -->
+      <!-- <li>
         <div class="switch_container">
             <div class="switch">
                 <label for="toggle">
@@ -29,19 +29,59 @@
                 </label>
             </div>
         </div>
-      </li>
+      </li> -->
     </ul>
 </header>
 <br>
 
-<body>
-  <div class="couch_counsel">
-    <h2>Project To-Do List:</h2>
-    <h5>* Remove grayed out "clicked link" option in all buttons in video control bar</h5>
-    <h5>* Add "view file" page prior to INITIAL video.html (client file). Reference the linkedlist head, index 0?</h5>
-    <h5>* Sidebar Menu (Holds View File - See accompanying asset)</h5>
-    <h5>* Gallery Screen</h5>
-    <h5>* DOWN THE LINE: Caption API/Dynamic Captioning, Add forgot password and DB integration</h5>
-    <h5>* Alt text and Color Pallete for Accessibility</h5>
-  </div>
+<body style="display: grid">
+    <!-- About Screen (Includes About Information, and Contact Information) -->
+    <div id="imgDiv" style="display: inline-flex">
+        <img src="../images/michael_lavetsky.png" class="headshot">
+        <div class="headshotAbout">
+            Prof Bio Here
+        </div>
+    </div>
+
+    <br>
+    <!-- <div class="aboutPanel">About this Project:</div><br> -->
+    <div id="aboutText" class="aboutText">
+        This simulation game was developed specifically for use in the RHS 401 Community Mental Health Practices and Services course offered at Penn State University.  
+        This simulation promotes the application of knowledge and skills learned throughout the course that relate to establishing a therapeutic relationship between a clinician and client, assessment and interviewing skills, ethical standards and guidelines, and general safety practices and crisis management.  
+        In this simulation, students will assume the role of a case manager working at a community mental health agency who is assigned to conduct a home visit.
+
+        For more about the PSU Abington RHS program, click <a href="https://www.abington.psu.edu/directory/rhs" target="_blank">here</a> or contact <a href="mailto:mbl122@psu.edu">Professor Michael Lavetsky</a>
+
+    </div>
+    <br>
+    <!-- <div class="aboutPanel">About the Developers:</div><br> -->
+    <div class="aboutDiv">
+        <div class="dev-container">
+            <img src="https://media-exp1.licdn.com/dms/image/D4D03AQHmzQF4Uq9BJA/profile-displayphoto-shrink_800_800/0/1670280987207?e=1675900800&v=beta&t=K5g9nVc4JpSNZU317ZKqFCMuFqVU9c9PHWKJ0RH5CqQ" style="width: 7vw; border-radius: 50%; border: 3px solid black;">
+            <h4><a target="_blank" href="https://www.linkedin.com/in/brandon-whitman-orlin-416ab7253/">Brandon Whitman-Orlin</a></h4>
+            <p>Backend Developer and Functionality Lead</p>
+        </div>
+
+        <div class="dev-container">
+            <img src="https://media-exp1.licdn.com/dms/image/C4E03AQGgYL5Ae0hwiQ/profile-displayphoto-shrink_800_800/0/1636131497466?e=1675900800&v=beta&t=GsBe9Me2opm9duD9JIo7Fm0i_CIlRmZWx-GRcjlEEqc" style="width: 7vw; border-radius: 50%; border: 3px solid black;">
+            <h4><a target="_blank" href="https://www.linkedin.com/in/jacob-gampa">Jacob Gampa</a></h4>
+            <p>Backend Developer, Game Design, and Optimization Lead</p>
+        </div>
+        
+        <div class="dev-container">
+            <img src="https://media-exp1.licdn.com/dms/image/C4E03AQEKW0s9cmCTww/profile-displayphoto-shrink_800_800/0/1660190116713?e=1675900800&v=beta&t=K3sSthVZKfPHJiUtA96tga_xgDa_9emw98o8vXi5bqw" style="width: 7vw; border-radius: 50%; border: 3px solid black;">
+            <h4><a target="_blank" href="https://www.linkedin.com/in/gabriel-nulman-8907bb143/">Gabriel Nulman</a></h4>
+            <p>Frontend Developer and Game Design</p>
+        </div>
+
+        <div class="dev-container">
+            <img src="https://media-exp1.licdn.com/dms/image/C5603AQHWYGZ91dt6DA/profile-displayphoto-shrink_800_800/0/1655675978037?e=1675900800&v=beta&t=N6GYAqDupmxTqXV5CTIAWnxVq2TYEXgga1gOqYYlMSw" style="width: 7vw; border-radius: 50%; border: 3px solid black;">
+            <h4><a target="_blank" href="https://www.linkedin.com/in/xingyu-jiang-51332b21b/">Xingyu Jiang</a></h4>
+            <p>QA Developer and Accessibility Lead</p>
+        </div>
+        
+        
+
+
+    </div>
 </body>

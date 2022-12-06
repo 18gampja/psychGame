@@ -285,7 +285,7 @@ function lockOptions(){
 
 function afterVideo() {
     lockOptions();
-    var prm1 = document.getElementById('prompt1'); prompt_h1
+    var prm1 = document.getElementById('prompt1');
     var prm1_h1 = document.getElementById('prompt_h1');
     prm1.style.display = "inline-flex";
     prm1_h1.innerHTML = currentVideo.choice1.text
@@ -463,15 +463,11 @@ darkMode.onclick = function()
     if (document.getElementById("toggle").checked) {
         document.body.classList.add("light")
         document.body.classList.remove("dark")
-        document.body.classList.add("videoControls_light")
-        document.body.classList.remove("videoControls_dark")
 
         }
     else {
         document.body.classList.add("dark")
         document.body.classList.remove("light")
-        document.body.classList.remove("videoControls_light")
-        document.body.classList.add("videoControls_dark")
         }
 }
 
