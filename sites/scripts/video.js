@@ -367,6 +367,11 @@ function direction1(){
         confirmButton.textContent = 'Continue'
     }
 
+    if (currentVideo.choice1.progression == 'ok')
+    {
+        prm1.style.backgroundColor = '#fa9048'
+    }
+
     confirmButton.style.visibility = 'visible'
 
     unlockOptions();
@@ -386,6 +391,11 @@ function direction2(){
     {
         prm2.style.backgroundColor = '#44f50f'
         confirmButton.textContent = 'Continue'
+    }
+
+    if (currentVideo.choice2.progression == 'ok')
+    {
+        prm2.style.backgroundColor = '#fa9048'
     }
 
     confirmButton.style.visibility = 'visible'
@@ -409,6 +419,11 @@ function direction3(){
         confirmButton.textContent = 'Continue'
     }
 
+    if (currentVideo.choice3.progression == 'ok')
+    {
+        prm3.style.backgroundColor = '#fa9048'
+    }
+
     confirmButton.style.visibility = 'visible'
     
     unlockOptions();
@@ -428,6 +443,11 @@ function direction4(){
     {
         prm4.style.backgroundColor = '#44f50f'
         confirmButton.textContent = 'Continue'
+    }
+
+    if (currentVideo.choice4.progression == 'ok')
+    {
+        prm4.style.backgroundColor = '#fa9048'
     }
 
     confirmButton.style.visibility = 'visible'
