@@ -5,9 +5,11 @@ import info from './info.json' assert { type: "json"};
 
 var data = info;
 
+var choiceMade = false;
+
 var keys = Object.keys(data);
 
-let vids = []
+let vids = [];
 for (const k in data)
 {
     vids.push(k);
@@ -119,10 +121,8 @@ class LinkedList {
         {
             videoList = this.next
             currentVideo = videoList.head
-            prm1.style.display = "none";
-            prm2.style.display = "none";
-            prm3.style.display = "none";
-            prm4.style.display = "none";
+            hidePrompts()
+            clearAnswers()
             updateVid()
         }
     }
@@ -133,10 +133,8 @@ class LinkedList {
         {
             videoList = this.prev
             currentVideo = videoList.head
-            prm1.style.display = "none";
-            prm2.style.display = "none";
-            prm3.style.display = "none";
-            prm4.style.display = "none";
+            hidePrompts()
+            clearAnswers()
             updateVid()
         }
     }
@@ -232,6 +230,14 @@ var play = document.getElementById("playVideoButton");
 
 // HTML is really stupid 
 
+function hidePrompts()
+{
+    prm1.style.display = "none";
+    prm2.style.display = "none";
+    prm3.style.display = "none";
+    prm4.style.display = "none";
+}
+
 function updateVid()
 {
     document.getElementById("embedVideo").src = currentVideo.url;
@@ -298,8 +304,6 @@ function afterVideo() {
     var prm4_h1 = document.getElementById('prompt_h4');
     prm4.style.display = "inline-flex";
     prm4_h1.innerHTML = currentVideo.choice4.text
-
-    
 }
 
 // Choice controls
@@ -312,24 +316,36 @@ var prm1 = document.getElementById('prompt1');
 var prm2 = document.getElementById('prompt2');
 var prm3 = document.getElementById('prompt3');
 var prm4 = document.getElementById('prompt4');
-var tipReply = document.getElementById('tip');
+var confirmButton = document.getElementById('continueButton');
+confirmButton.textContent = 'Try again';
+
+confirmButton.addEventListener('click', proceed);
+
+function proceed()
+{
+
+    if (confirmButton.textContent != 'Continue')
+    {
+        confirmButton.style.visibility = 'hidden'
+        tip.style.visibility = 'hidden'
+        choiceMade = false;
+        hidePrompts()
+        vid.currentTime = 0;
+        playVid()
+        return;
+    }
+
+    confirmButton.style.visibility = 'hidden'
+    tip.style.visibility = 'hidden'
+    choiceMade = false;
+    videoList.progress()
+    return;
+
+}
 
 function unlockOptions(){
     var options = document.getElementById('videoControls');
     options.style.visibility= "visible";
-}
-
-if(currentVideo.choice1) {
-    document.getElementById("prompt1").style.visibility= "visible";
-}
-if(currentVideo.choice2) {
-    document.getElementById("prompt2").style.visibility= "visible";
-}
-if(currentVideo.choice3) {
-    document.getElementById("prompt3").style.visibility= "visible";
-}
-if(currentVideo.choice4) {
-    document.getElementById("prompt4").style.visibility= "visible";
 }
 
 // I updated these briefly to work with the new linked list
@@ -337,84 +353,106 @@ if(currentVideo.choice4) {
 
 function direction1(){
     
-    prm1.style.backgroundColor = "#de821f"; //OK respone 
+    if (choiceMade == true) return;
+
+    prm1.style.backgroundColor = "#bd0f0f";
+    confirmButton.textContent = 'Try again';
     tip.textContent = currentVideo.choice1.tip;
     tip.style.visibility = "visible";
-    
-    prm1.style.display = "none";
-    prm2.style.display = "none";
-    prm3.style.display = "none";
-    prm4.style.display = "none";
+    choiceMade = true
 
     if (currentVideo.choice1.progression == 'True')
     {
-        videoList.progress()
-        clearAnswers()
+        prm1.style.backgroundColor = '#44f50f'
+        confirmButton.textContent = 'Continue'
     }
+
+    confirmButton.style.visibility = 'visible'
 
     unlockOptions();
 }
 
 function direction2(){
     
-    prm2.style.backgroundColor = "#bd0f0f"; //BAD respone 
+    if (choiceMade == true) return;
+
+    prm2.style.backgroundColor = "#bd0f0f"; 
+    confirmButton.textContent = 'Try again';
     tip.textContent = currentVideo.choice2.tip;
     tip.style.visibility = "visible";
-    
-    prm1.style.display = "none";
-    prm2.style.display = "none";
-    prm3.style.display = "none";
-    prm4.style.display = "none";
+    choiceMade = true
 
     if (currentVideo.choice2.progression == 'True')
     {
-        videoList.progress()
-        clearAnswers()
+        prm2.style.backgroundColor = '#44f50f'
+        confirmButton.textContent = 'Continue'
     }
+
+    confirmButton.style.visibility = 'visible'
 
     unlockOptions();
 }
 
 function direction3(){
     
-    prm3.style.backgroundColor = "#44f50f"; //GOOD respone 
+    if (choiceMade == true) return;
+
+    prm3.style.backgroundColor = "#bd0f0f"; 
+    confirmButton.textContent = 'Try again'; 
     tip.textContent = currentVideo.choice3.tip;
     tip.style.visibility = "visible";
-    
-    prm1.style.display = "none";
-    prm2.style.display = "none";
-    prm3.style.display = "none";
-    prm4.style.display = "none";
+    choiceMade = true
 
     if (currentVideo.choice3.progression == 'True')
     {
-        document.getElementById("continueButton").style.visibility = "visible";
-        videoList.progress()
-        clearAnswers()
+        prm3.style.backgroundColor = '#44f50f'
+        confirmButton.textContent = 'Continue'
     }
+
+    confirmButton.style.visibility = 'visible'
     
     unlockOptions();
 }
 
 function direction4(){
 
-    prm4.style.backgroundColor = "#de821f"; //OK respone 
+    if (choiceMade == true) return;
+
+    prm4.style.backgroundColor = "#bd0f0f";
+    confirmButton.textContent = 'Try again';
     tip.textContent = currentVideo.choice4.tip;
     tip.style.visibility = "visible";
-    
-    prm1.style.display = "none";
-    prm2.style.display = "none";
-    prm3.style.display = "none";
-    prm4.style.display = "none";
+    choiceMade = true
 
     if (currentVideo.choice4.progression == 'True')
     {
-        videoList.progress()
-        clearAnswers()
+        prm4.style.backgroundColor = '#44f50f'
+        confirmButton.textContent = 'Continue'
     }
+
+    confirmButton.style.visibility = 'visible'
 
     unlockOptions();
 }
 // End choice controls
+
+var darkMode = document.getElementById("toggle");
+
+darkMode.onclick = function()
+{
+    if (document.getElementById("toggle").checked) {
+        document.body.classList.add("light")
+        document.body.classList.remove("dark")
+        document.body.classList.add("videoControls_light")
+        document.body.classList.remove("videoControls_dark")
+
+        }
+    else {
+        document.body.classList.add("dark")
+        document.body.classList.remove("light")
+        document.body.classList.remove("videoControls_light")
+        document.body.classList.add("videoControls_dark")
+        }
+}
 
 // 400 lines bitch
