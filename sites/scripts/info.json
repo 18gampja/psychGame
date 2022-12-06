@@ -3,15 +3,15 @@
         {
             "url" : "13U0KcfWsgn8ZbECGqqndGjXsuWA2VHw9",
             "choice1" : {"text" : "Let Ms. Jones know that participation is entirely voluntary.", 
-                        "progression" : "False", 
+                        "progression" : "ok",
                         "tip" : "Not the worst response.  What else can you say to Mrs. Jones to facilitate a home visit?"},
 
-            "choice2" : {"text" : "Remind Ms. Jones that she already agreed to the appointment.", 
-                        "progression" : "False", 
+            "choice2" : {"text" : "Remind Ms. Jones that she already agreed to the appointment.",
+                        "progression" : "False",
                         "tip" : "Not a good response!  How might you deliver this message differently?"},
 
             "choice3" : {"text" : "Allow Ms. Jones more time to think about it and call her back later.",
-                        "progression" : "False", 
+                        "progression" : "ok",
                         "tip" : "Not the worst response.  What else can you say to Mrs. Jones to facilitate a home visit?"},
 
             "choice4" : {"text" : "Let Ms. Jones know about the benefits of your program.",
@@ -19,11 +19,11 @@
                         "tip" : "Good!  This response is less likely to elicit a defensive response from the client while continuing to allow her a choice to participate."}
         },
 
-    "video2" : 
+    "video2" :
         {
             "url" : "1c3XroOQSs6GbELasdGX7oN1z25UrNpt2",
-            "choice1" : {"text" : "Ask Ms. Jones where she prefers to sit.", 
-                        "progression" : "False", 
+            "choice1" : {"text" : "Ask Ms. Jones where she prefers to sit.",
+                        "progression" : "ok",
                         "tip" : "Not the worst response.  Are there any potential problems with this?"},
 
             "choice2" : {"text" : "Although in a common area, suggest the kitchen or dining room table.",
@@ -31,21 +31,21 @@
                         "tip" : "Good!  This response allows the case manager to meet in a neutral part of the home away from distractions while having an area to take notes."},
 
             "choice3" : {"text" : "Request a quiet area, such as a bedroom.",
-                        "progression" : "False", 
+                        "progression" : "False",
                         "tip" : "Not a good response!  Why might it not be appropriate to meet a client in a bedroom?"},
 
-            "choice4" : {"text" : "TBD",
-                        "progression" : "False", 
-                        "tip" : "TBD"}
+            "choice4" : {"text" : "Choose the couch in the living room.",
+                        "progression" : "ok",
+                        "tip" : "Not the worst response.  You would want to request that the television be turned off.  It might also be difficult to take notes and complete documents without the use of a table"}
 
 
         },
 
-    "video3" : 
+    "video3" :
         {
             "url" : "dummyurl1.com",
             "choice1" : {"text" : "Tell Ms. Jones there is no need to meet with Nelson.",
-                        "progression" : "False", 
+                        "progression" : "False",
                         "tip" : "Not a good response!  Can you think of any reasons why it would be necessary to meet with Nelson?"},
 
             "choice2" : {"text" : "Meet with Ms. Jones now and meet with Nelson later.",
@@ -53,15 +53,15 @@
                         "tip" : "Good!  Why is it important to meet with Ms. Jones and Nelson?"},
 
             "choice3" : {"text" : "Meet with Nelson only",
-                        "progression" : "False", 
+                        "progression" : "False",
                         "tip" : "Not a good response!  Can you think of any reasons why it would be necessary to meet with Ms. Jones?"},
 
             "choice4" : {"text" : "Meet with Ms. Jones and Nelson together, but not separately.",
-                        "progression" : "False",
+                        "progression" : "ok",
                         "tip" : "Not the worst response.  Why might it be beneficial to meet with Ms. Jones together as well as separately during the same home visit?"}
         },
 
-    "video4" : 
+    "video4" :
         {
             "url" : "dummyurl2.com",
 
@@ -70,27 +70,27 @@
                         "tip" : "Good!  It will be helpful to get a better understanding of the problems that Nelson is experiencing."},
 
             "choice2" : {"text" : "Ask Ms. Jones what type of discipline she uses in the home.",
-                        "progression" : "False", 
+                        "progression" : "ok",
                         "tip" : "Not the worst response.  First, you should try and receive more information about the nature of the problem."},
 
             "choice3" : {"text" : "Remind Ms. Jones that you are there to help and reassure her that things will improve.",
-                        "progression" : "False", 
+                        "progression" : "False",
                         "tip" : "Not a good response!  It would be best to get a better understanding of the problem.  Additionally, you should not make promises to Ms. Jones that you may not be able to keep."},
 
-            "choice4" : {"text" : "TBD", 
+            "choice4" : {"text" : "Empathize with Ms. Jones by telling her about the behavioral problems of your own children",
                         "progression" : "False",
-                        "tip" : "TBD"}
+                        "tip" : "Not a good response!  Self-disclosure can be helpful at times, but might not be appropriate in this instance. Why?"}
         },
 
-    "video5" : 
+    "video5" :
         {
             "url" : "dummyurl3.com",
             "choice1" : {"text" : "Tell Ms. Jones that she is not permitted to “smack” her son and you are obligated to report the incident as a mandated reporter.",
-                        "progression" : "False", 
+                        "progression" : "False",
                         "tip" : "Not a good response!  More information is needed to determine if a report to Childline for child abuse is needed."},
 
             "choice2" : {"text" : "Tell Ms. Jones that you understand her frustration and that you are confident you will be able to help.",
-                        "progression" : "False", 
+                        "progression" : "False",
                         "tip" : "Not a good response!  While it is good to validate Ms. Jones’ feelings, you cannot guarantee that you will be able to make things better.  Can you think of a reason why it might be bad to give a client false hope?"},
 
             "choice3" : {"text" : "Tell Ms. Jones that you understand her frustration and you would like to know more about the physical discipline used in the home.",
@@ -98,7 +98,7 @@
                         "tip" : "Good!  It is helpful to validate Ms. Jones’ feelings while getting a better sense about the discipline practices used in the home.  Why is this important?"},
 
             "choice4" : {"text" : "Tell Ms. Jones that you are concerned about her use of physical discipline in the home, but you will be able to help.",
-                        "progression" : "False",
+                        "progression" : "ok",
                         "tip" : "Not the worst response.  However, the nature of the physical discipline remains unknown and this response might be upsetting to a parent (especially if the parent feels as if they are being judged).  What might be a better response?"}
 
         },
@@ -111,16 +111,16 @@
                         "tip" : "Good!  We need to gather more information to determine whether the incident is reportable.  What is the statute of limitations in PA for reporting physical abuse or suspected physical abuse of a child?"},
 
             "choice2" : {"text" : "Tell Ms. Jones that you are obligated to report the incident as a mandated reporter.",
-                        "progression" : "False",
+                        "progression" : "ok",
                         "tip" : "Not the worst response.  However, you will need more information to determine whether the incident is reportable.  What is the statute of limitations in PA for reporting physical abuse or suspected physical abuse of a child?"},
 
             "choice3" : {"text" : "Speak with Ms. Jones to ensure that Nelson does not have any contact with his father to prevent further abuse.",
                         "progression" : "False",
                         "tip" : "Not a good response!  We need to gather more information to determine whether the incident is reportable.   Additionally, we do not know the nature of Nelson’s relationship with his father."},
 
-            "choice4" : {"text" : "TBD",
+            "choice4" : {"text" : "Let Ms. Jones know that child abuse is unacceptable and express your concern to her.",
                         "progression" : "False",
-                        "tip" : "TBD"}
+                        "tip" : "Not a good response!   This response appears to be judgmental.  More information should be gathered, but in a supportive and non-judgmental manner."}
         },
 
     "video7" :
@@ -130,28 +130,28 @@
                         "progression" : "False",
                         "tip" : "Not a good response!  The statute of limitations in PA for reporting physical abuse or suspected physical abuse of a child is two years.  Nelson is in no immediate danger and a report of child abuse is not warranted at this time."},
 
-            "choice2" : {"text" : "TBD",
-                        "progression" : "False",
-                        "tip" : "TBD"},
+            "choice2" : {"text" : "Let Ms. Jones know that you need to contact your supervisor to determine whether the incident needs to be reported",
+                        "progression" : "ok",
+                        "tip" : "Not the worst response.  Although your supervisor can serve as a great resource, you should be knowledgeable regarding child abuse reporting guidelines."},
 
             "choice3" : {"text" : "Mandated reporting is not required at this time.  Continue with the clinical interview of Ms. Jones.",
                         "progression" : "True",
                         "tip" : "Good!  The statute of limitations in PA for reporting physical abuse or suspected physical abuse of a child is two years.  Nelson is in no immediate danger and a report of child abuse is not warranted at this time."},
 
-            "choice4" : {"text" : "TBD",
+            "choice4" : {"text" : "Inform Ms. Jones that Nellie will not be permitted to have contact with his father due to the abuse allegations",
                         "progression" : "False",
-                        "tip" : "TBD"}
+                        "tip" : "Not a good response!  The statute of limitations in PA for reporting physical abuse or suspected physical abuse of a child is two years.  Nelson is in no immediate danger and a report of child abuse is not warranted at this time."}
         },
 
     "video8" :
         {
             "url" : "dummyurl6.com",
             "choice1" : {"text" : "Refer Ms. Jones to parenting classes.",
-                        "progression" : "False",
+                        "progression" : "ok",
                         "tip" : "Not the worst response.  Ms. Jones could benefit from parenting classes.  Are there other services from which Nelson and/or Ms. Jones could benefit?"},
 
             "choice2" : {"text" : "Refer Ms. Jones to local counseling services for children with behavioral problems.",
-                        "progression" : "False",
+                        "progression" : "ok",
                         "tip" : "Not the worst response.  Are there other services from which Nelson and/or Ms. Jones could benefit?"},
 
             "choice3" : {"text" : "Tell Ms. Jonesthat if she changes her parenting style, then Nelson’s behavior should improve and refer her to parenting classes.",
