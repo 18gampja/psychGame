@@ -436,4 +436,23 @@ function direction4(){
 }
 // End choice controls
 
+var darkMode = document.getElementById("toggle");
+
+darkMode.onclick = function()
+{
+    if (document.getElementById("toggle").checked) {
+        document.body.classList.add("light")
+        document.body.classList.remove("dark")
+        document.body.classList.add("videoControls_light")
+        document.body.classList.remove("videoControls_dark")
+
+        }
+    else {
+        document.body.classList.add("dark")
+        document.body.classList.remove("light")
+        document.body.classList.remove("videoControls_light")
+        document.body.classList.add("videoControls_dark")
+        }
+}
+
 // 400 lines bitch
