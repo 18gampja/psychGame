@@ -1,13 +1,22 @@
 /* Set page color NOT including header */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 * {
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.1rem;
+
 }
 
 body { 
   height: 100%;
   width: 100%;
   margin: 0;
-  font-family: Helvetica, sans-serif;
+  font-style: normal;
+
   align-items: center;
   justify-content: center;
 
@@ -17,6 +26,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+
+  color: black;
 }
 
 .couch_counsel {
@@ -38,7 +49,7 @@ body {
   /* margin-left: 25%; */
   /* margin-right: auto; */
   height: 25vh;
-  border: 5px solid #e4630d;
+  border: 5px solid black;
   border-radius: 25px;
 }
 
@@ -48,10 +59,8 @@ body {
 
 .headshotAbout {
   /* text-align: center; */
-  font-family: "Verdana";
-  font-size:calc(20 + 1vw);
-  font-weight: 900;
-  color: white;
+  font-size: 1.5rem;
+  /* color: white; */
   margin-right: 2%;
   border-radius: 25px;
   padding: 20px;
@@ -60,6 +69,10 @@ body {
   overflow-wrap: break-word;
   width: 100%;
   justify-content: left;
+
+  border: 3px solid black;
+  color: white;
+  /* box-shadow: 0 0 1px 0px black inset, 0 0 1px 0px black; */
   
 
   /* position: relative; */
@@ -68,11 +81,9 @@ body {
 
 .aboutPanel {
   text-align: center;
-  font-family: "Verdana";
-  font-size:calc(20 + 1vw);
-  font-weight: 900;
+  /* font-size:calc(20 + 1vw); */
   /* text-shadow: -1px -1px 0 #FFFFFF; */
-  color: white;
+  /* color: white; */
   /* margin-left: auto; */
   margin-right: auto;
   border-radius: 25px;
@@ -85,9 +96,8 @@ body {
 }
 
 .aboutText {
-  font-family: "Verdana";
-  font-size:calc(20 + 1vw);
-  font-weight: 900;
+  border: 3px solid black;
+  /* font-size:calc(20 + 1vw); */
   /* text-shadow: -1px -1px 0 #FFFFFF; */
   color: white;
   /* margin-left: auto; */
@@ -105,11 +115,13 @@ body {
 
   /* position: relative; */
   z-index: 3;
+  font-size: 1.5rem;
 }
 
 .aboutText a {
   /* color: #ab7d00; */
-  color: #e3c164;
+  color: #87CEEB;
+  font-size: 1.5rem;
 }
 
 .aboutText li {
@@ -134,20 +146,28 @@ body {
   margin-bottom: 5px;
 }
 
+.prompts {
+  display: flex;
+}
+
 .pathSelector {
-  width: auto;
-  height: 120px;
+  width: 20%;
+  height: auto;
+  /* max-height: 200px; */
   /* margin-top: 20px; */
-  margin: 2px;
-  inline-size: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  /* inline-size: 150px; */
   overflow-wrap: break-word;
   border-radius: 15px 15px 15px 15px;
-  background-color: #fcfcfc;
+  background-color: bisque;
   display: none;
   flex-wrap: wrap;
   position: relative;
   z-index: 5;
   text-align: center;
+  justify-content: center;
+  border: 3px solid black;
   /* align-items: center; */
 }
 
@@ -156,7 +176,7 @@ body {
   background: none;
   border: none;
   color: #15e215;
-  font-family: Verdana;
+  /* font-family: Verdana; */
   font-size:calc(12 + 1vw);
   font-weight: bold;
   cursor: pointer;
@@ -166,7 +186,7 @@ body {
   background: none;
   border: none;
   color: #600000;
-  font-family: Verdana;
+  /* font-family: Verdana; */
   font-size:calc(12 + 1vw);
   font-weight: bold;
   cursor: pointer;
@@ -176,7 +196,7 @@ body {
   background: none;
   border: none;
   color: #600000;
-  font-family: Verdana;
+  /* font-family: Verdana; */
   font-size:calc(12 + 1vw);
   font-weight: bold;
   cursor: pointer;
@@ -186,17 +206,18 @@ body {
   /* display: inline-block; */
   /* z-index: 5; */
   min-width: 20%;
-  max-width: 70%;
+  max-width: 80%;
   /* width: auto; */
-  width: 480px;
+  /* width: 480px; */
   border-radius: 0px 0px 25px 25px;
+  border: 3px solid black;
   padding: 5px;
-  background-color: #ffffff;
+  background-color: bisque;
 
   margin: 0 auto;
   text-align: center;
 
-  inline-size: 200px;
+  inline-size: 35%;
   overflow-wrap: break-word;
 }
 
@@ -208,11 +229,12 @@ a {
 /* header */
 
 .header {
-  background-color: #fff;
-  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  background-color: rgb(0, 0, 0);
+  box-shadow: 1px 1px 4px 0 rgba(156, 27, 27, 0.1);
   position: fixed;
   width: 100%;
-  z-index: 3;
+  z-index: 50;
+  color: white;
 }
 
 .header ul {
@@ -220,19 +242,21 @@ a {
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: #fff;
+  background-color: rgb(0, 0, 0);
 }
 
 .header li a {
   display: block;
   padding: 20px 20px;
-  border-right: 1px solid #f4f4f4;
+  border-right: 1px solid #484848;
   text-decoration: none;
+  color: white;
 }
 
 .header li a:hover,
 .header .menu-btn:hover {
-  background-color: #f4f4f4;
+  /* background-color: #f4f4f4; */
+  background-color: #484848;
 }
 
 .header .logo {
@@ -241,6 +265,7 @@ a {
   font-size: 2em;
   padding: 10px 20px;
   text-decoration: none;
+  color: white;
 }
 
 /* menu */
@@ -317,9 +342,44 @@ a {
   top: 0;
 }
 
+
+/* Change styles for span and cancel button on extra small screens */
+@media (max-width: 53em) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+
+  .header .logo {
+    display: block;
+    float: left;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+
+  .playButton {
+    font-size: 0.8rem;
+  }
+
+  .pauseButton {
+    font-size: 0.8rem;
+  }
+
+  .muteButton {
+    font-size: 0.8rem;
+  }
+
+}
+
+
+
 /* 48em = 768px */
 
-@media (min-width: 48em) {
+@media (min-width: 53em) {
   .header li {
     float: left;
   }
@@ -402,17 +462,6 @@ span.psw {
   margin-left: 25%;
   margin-right: 25%;
   
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
 }
 
 /* View File Modal */
@@ -499,7 +548,8 @@ span.psw {
 
 .embedVideo {
   min-width: 20%;
-  max-width: 60%;
+  max-width: 50vw;
+  /* max-height: 50%; */
   margin-top: 50px;
   /* position: fixed; */
   display: flex;
@@ -507,6 +557,7 @@ span.psw {
   margin-right: auto;
   border-radius: 25px;
   margin-bottom: 0;
+  border: 5px solid black;
 }
 
 .aboutDiv {
@@ -517,13 +568,15 @@ span.psw {
   background-color: grey;
   border-radius: 15px 15px 15px 15px;
   justify-content: center;
+  border: 3px solid black;
 }
 
 .dev-container {
   width: auto;
-  margin: 2vw;
+  margin-left: auto;
+  margin-right: auto;
   padding: 20px;
-  inline-size: 250px;
+  inline-size: 300px;
   text-align: center;
   flex-direction: column;
   overflow-wrap: break-word;
@@ -535,9 +588,13 @@ span.psw {
   align-items: center;
 }
 
+.dev-container a {
+  color: #87CEEB;
+}
+
 #continueButton {
   background-color: #ffffff;
-  color: black;
+  /* color: black; */
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -553,4 +610,106 @@ span.psw {
 
 .button-center {
   text-align: center;
+}
+
+.switch_container {
+  height: calc(100% - 2rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.switch {
+  position: relative;
+  overflow: hidden;
+  width: 7.5rem;
+  height: 3rem;
+
+}
+
+.switch input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  opacity: 0;
+}
+
+.switch label {
+  cursor: pointer;
+}
+
+.background {
+  z-index: 1;
+  position: absolute;
+  width: 6.5rem;
+  height: 3rem;
+  border-radius: 2.5rem;
+  border: 0.25rem solid #202020;
+  background: linear-gradient(to right, #484848 0%,#202020 100%);
+  transition: all 0.3s;
+}
+
+.imgSwitch {
+  width: 100%;
+}
+
+.sun-moon {
+  z-index: 5;
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  margin: 0.5rem;
+  background: #FFFDF2;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  
+  /* Default to Moon */
+  border: 0.25rem solid #797a70;
+}
+
+/* Circle When Switched to Day mode */
+.switch input:checked ~ .sun-moon {
+  left: calc(100% - 4rem);
+  background: #F5EC59;
+  border-color: #E7C65C;
+}
+
+
+/* Surrounding Border of Switch Toggle */
+.switch input:checked ~ .background {
+  border: 0.25rem solid #78C1D5;
+  background: linear-gradient(to right, #78C1D5 0%, #ffffff 100%);
+}
+
+.switch input:checked ~ .header a{
+  color: white;
+  background: black;
+}
+
+.dark {
+  background-color: black;
+  color: whitesmoke;
+  transition: 0.75s all ease;
+}
+
+.light {
+  background-color: whitesmoke;
+  color: black;
+  transition: 0.75s all ease;
+}
+
+.videoControls_light {
+  /* color: black; */
+  background-color: rgb(255, 255, 255);
+  transition: 0.75s all ease;
+}
+
+.videoControls_dark {
+  /* color: white; */
+  background-color: rgb(0, 0, 0);
+  transition: 0.75s all ease;
 }
