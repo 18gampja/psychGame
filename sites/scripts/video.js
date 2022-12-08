@@ -24,7 +24,8 @@ class Node {
     {
         if (video != null)
         {
-            this.url = "https://drive.google.com/uc?export=download&id=" + data[video].url;
+            // this.url = "https://drive.google.com/uc?export=download&id=" + data[video].url;
+            this.url = "https://drive.google.com/uc?id=" + data[video].url;
             this.choice1 = new Answer(video, 'choice1');
             this.choice2 = new Answer(video, 'choice2');
             this.choice3 = new Answer(video, 'choice3');
