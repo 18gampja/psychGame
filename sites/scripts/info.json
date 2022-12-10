@@ -1,8 +1,8 @@
 {
-    "video1" :
+    "videoA" :
         {
-            "url" : "13U0KcfWsgn8ZbECGqqndGjXsuWA2VHw9",
-            "choice1" : {"text" : "Let Ms. Jones know that participation is entirely voluntary.", 
+            "url" : "1riGFZ8T0_M6q0pt9_GmXkdoNGiE__2RZ",
+            "choice1" : {"text" : "Let Ms. Jones know that participation is entirely voluntary.",
                         "progression" : "ok",
                         "tip" : "Not the worst response.  What else can you say to Mrs. Jones to facilitate a home visit?"},
 
@@ -19,9 +19,9 @@
                         "tip" : "Good!  This response is less likely to elicit a defensive response from the client while continuing to allow her a choice to participate."}
         },
 
-    "video2" :
+    "videoB" :
         {
-            "url" : "1c3XroOQSs6GbELasdGX7oN1z25UrNpt2",
+            "url" : "1Gi1XSXdiRJ-RVBp6FCMfPO6m_YfvG30V",
             "choice1" : {"text" : "Ask Ms. Jones where she prefers to sit.",
                         "progression" : "ok",
                         "tip" : "Not the worst response.  Are there any potential problems with this?"},
@@ -43,7 +43,7 @@
 
     "video3" :
         {
-            "url" : "dummyurl1.com",
+            "url" : "1QNkprC1ceBvvF6E5lgafFLPLPPRxP1md",
             "choice1" : {"text" : "Tell Ms. Jones there is no need to meet with Nelson.",
                         "progression" : "False",
                         "tip" : "Not a good response!  Can you think of any reasons why it would be necessary to meet with Nelson?"},
@@ -63,7 +63,7 @@
 
     "video4" :
         {
-            "url" : "dummyurl2.com",
+            "url" : "12g6Jt4w37jH-XZ_-15ujIMyVF0yAo7XH",
 
             "choice1" : {"text" : "Empathize with Ms. Jones and ask for further clarification about Nelson’s problems.",
                         "progression" : "True",
@@ -84,7 +84,7 @@
 
     "video5" :
         {
-            "url" : "dummyurl3.com",
+            "url" : "1edsx9Vodzzt68xL0V8PSXobDvOkAmsCY",
             "choice1" : {"text" : "Tell Ms. Jones that she is not permitted to “smack” her son and you are obligated to report the incident as a mandated reporter.",
                         "progression" : "False",
                         "tip" : "Not a good response!  More information is needed to determine if a report to Childline for child abuse is needed."},
@@ -105,7 +105,7 @@
 
     "video6" :
         {
-            "url" : "dummyurl4.com",
+            "url" : "1lEg2UOiHmJn_brHQ8RqhYgY3Q43X5CoC",
             "choice1" : {"text" : "Continue to gather more information",
                         "progression" : "True",
                         "tip" : "Good!  We need to gather more information to determine whether the incident is reportable.  What is the statute of limitations in PA for reporting physical abuse or suspected physical abuse of a child?"},
@@ -125,7 +125,7 @@
 
     "video7" :
         {
-            "url" : "dummyurl5.com",
+            "url" : "1HrOhlva9jvpNlGrrQSrJaydofvOSNnx1",
             "choice1" : {"text" : "Remind Ms. Jones that you are a mandated reporter and are obligated to report the incident even though it was only a one time occurrence.",
                         "progression" : "False",
                         "tip" : "Not a good response!  The statute of limitations in PA for reporting physical abuse or suspected physical abuse of a child is two years.  Nelson is in no immediate danger and a report of child abuse is not warranted at this time."},
@@ -145,7 +145,7 @@
 
     "video8" :
         {
-            "url" : "dummyurl6.com",
+            "url" : "1MOb05Ce6jDO9bX_yDlgfqGR2VSdPFTiK",
             "choice1" : {"text" : "Refer Ms. Jones to parenting classes.",
                         "progression" : "ok",
                         "tip" : "Not the worst response.  Ms. Jones could benefit from parenting classes.  Are there other services from which Nelson and/or Ms. Jones could benefit?"},
@@ -165,7 +165,7 @@
 
     "video9" :
         {
-            "url" : "dummyurl7.com",
+            "url" : "1IURj6Ztk9bWVfVDZxq1Z6RzF64RuHIEy",
             "choice1" : {"text" : "TBD",
                         "progression" : "False",
                         "tip" : "TBD"},
