@@ -22,7 +22,7 @@ body {
 
   /* background-color: rgba(0, 0, 0, 0.5); */
   /* box-shadow: inset 0 0 0 999em rgba(0, 0, 0, 0.5); */
-  background-image: url("images/philly_compressed.jpg");
+  background-image: url("images/philly.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -59,7 +59,7 @@ body {
 
 .headshotAbout {
   /* text-align: center; */
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   /* color: white; */
   margin-right: 2%;
   border-radius: 25px;
@@ -178,7 +178,7 @@ body {
   border: none;
   color: #15e215;
   /* font-family: Verdana; */
-  font-size:calc(12 + 1vw);
+  /* font-size: 0.8rem; */
   font-weight: bold;
   cursor: pointer;
 }
@@ -188,7 +188,7 @@ body {
   border: none;
   color: #600000;
   /* font-family: Verdana; */
-  font-size:calc(12 + 1vw);
+  /* font-size:calc(12 + 1vw); */
   font-weight: bold;
   cursor: pointer;
 }
@@ -198,18 +198,19 @@ body {
   border: none;
   color: #600000;
   /* font-family: Verdana; */
-  font-size:calc(12 + 1vw);
+  /* font-size:calc(12 + 1vw); */
   font-weight: bold;
   cursor: pointer;
 }
+
 .videoControls{
   position: relative;
   /* display: inline-block; */
   /* z-index: 5; */
-  min-width: 20%;
-  max-width: 80%;
-  /* width: auto; */
-  /* width: 480px; */
+  /* min-width: 20%;
+  max-width: 80%; */
+  /* display: inline; */
+  /* width: 30vw; */
   border-radius: 0px 0px 25px 25px;
   border: 3px solid black;
   padding: 5px;
@@ -218,7 +219,7 @@ body {
   margin: 0 auto;
   text-align: center;
 
-  inline-size: 35%;
+  inline-size: 10vw;
   overflow-wrap: break-word;
 }
 
@@ -236,6 +237,7 @@ a {
   width: 100%;
   z-index: 50;
   color: white;
+  font-size: 1.1rem;
 }
 
 .header ul {
@@ -568,10 +570,12 @@ span.psw {
   padding: 15px 32px;
 }
 
+
 .embedVideo {
-  min-width: 20%;
-  max-width: 50vw;
-  /* max-height: 50%; */
+  /* min-height: 20%;
+  max-height: 60vh; */
+  /* width: 500px; */
+  max-width: 15vw;
   margin-top: 50px;
   /* position: fixed; */
   display: flex;

@@ -256,20 +256,22 @@ function pauseVid() {
 
 function muteVid() {
     if(vid.muted == true){
-    mute.innerHTML = 'Mute';
+    // mute.innerHTML = 'Mute';
+    mute.innerHTML = '<img src="https://img.icons8.com/ios/30/737373/high-volume--v1.png"/>';
     vid.muted = false;
     } else {
-    mute.innerHTML = 'Unmute';
+    // mute.innerHTML = 'Unmute';
+    mute.innerHTML = '<img src="https://img.icons8.com/ios/30/null/no-audio--v1.png"/>'
     vid.muted = true;
     }
 }
 
 // Clear Answer Colors on progression and regression
 function clearAnswers() {
-    prm1.style.backgroundColor = "#FFFFFF";
-    prm2.style.backgroundColor = "#FFFFFF";
-    prm3.style.backgroundColor = "#FFFFFF";
-    prm4.style.backgroundColor = "#FFFFFF";
+    prm1.style.backgroundColor = "bisque";
+    prm2.style.backgroundColor = "bisque";
+    prm3.style.backgroundColor = "bisque";
+    prm4.style.backgroundColor = "bisque";
 }
 
 play.addEventListener("click", playVid);

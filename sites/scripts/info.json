@@ -1,7 +1,7 @@
 {
     "video1" :
         {
-            "url" : "13U0KcfWsgn8ZbECGqqndGjXsuWA2VHw9",
+            "url" : "1HbpO_4qfmqH1QhXklH0saaoIPuo8yhOg",
             "choice1" : {"text" : "Let Ms. Jones know that participation is entirely voluntary.", 
                         "progression" : "ok",
                         "tip" : "Not the worst response.  What else can you say to Mrs. Jones to facilitate a home visit?"},
@@ -21,7 +21,7 @@
 
     "video2" :
         {
-            "url" : "1c3XroOQSs6GbELasdGX7oN1z25UrNpt2",
+            "url" : "1-sEL9We8uzKPhWywHPgqgAke7jxlpKkI",
             "choice1" : {"text" : "Ask Ms. Jones where she prefers to sit.",
                         "progression" : "ok",
                         "tip" : "Not the worst response.  Are there any potential problems with this?"},
@@ -43,22 +43,22 @@
 
     "video3" :
         {
-            "url" : "dummyurl1.com",
-            "choice1" : {"text" : "Tell Ms. Jones there is no need to meet with Nelson.",
-                        "progression" : "False",
-                        "tip" : "Not a good response!  Can you think of any reasons why it would be necessary to meet with Nelson?"},
-
-            "choice2" : {"text" : "Meet with Ms. Jones now and meet with Nelson later.",
-                        "progression" : "True",
-                        "tip" : "Good!  Why is it important to meet with Ms. Jones and Nelson?"},
-
-            "choice3" : {"text" : "Meet with Nelson only",
-                        "progression" : "False",
-                        "tip" : "Not a good response!  Can you think of any reasons why it would be necessary to meet with Ms. Jones?"},
-
-            "choice4" : {"text" : "Meet with Ms. Jones and Nelson together, but not separately.",
+            "url" : "1shi4Pf4U8ZsqbM_TGg8OIVF2p2TjGxV6",
+            "choice1" : {"text" : "Accept the drink and thank Ms. Jones.",
                         "progression" : "ok",
-                        "tip" : "Not the worst response.  Why might it be beneficial to meet with Ms. Jones together as well as separately during the same home visit?"}
+                        "tip" : "Not the worst response.  Some instructors/professionals argue that you should never accept food or drink from a client.  Why?"},
+
+            "choice2" : {"text" : "Politely decline the drink and thank Ms. Jones for the offer.",
+                        "progression" : "Best",
+                        "tip" : "Good!  It is common practice to not accept food, drink, or gifts from clients."},
+
+            "choice3" : {"text" : "Accept the drink and ask Ms. Jones if you can also have a snack.",
+                        "progression" : "False",
+                        "tip" : "Not a good response!  It is inappropriate to ask clients for food, drinks, or items!  How does this represent poor professional boundaries?"},
+
+            "choice4" : {"text" : "Decline the drink, but ask Ms. Jones whether she’d like to join you for lunch.",
+                        "progression" : "False",
+                        "tip" : "Not a good response!  This is a home visit and would be inappropriate to have lunch with the client!  How does this represent poor professional boundaries?"}
         },
 
     "video4" :
