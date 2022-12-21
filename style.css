@@ -210,6 +210,8 @@ body {
 
 .videoControls img {
   width: 2vw;
+  padding: 0;
+  margin: 0;
 }
 
 
@@ -580,7 +582,7 @@ span.psw {
   /* min-height: 20%;
   max-height: 60vh; */
   /* width: 500px; */
-  max-width: 25vw;
+  max-width: 15vw;
   margin-top: 100px;
   /* position: fixed; */
   display: flex;
