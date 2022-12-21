@@ -178,6 +178,7 @@ body {
   border: none;
   color: #15e215;
   cursor: pointer;
+  padding: 0px 0px;
 }
 .pauseButton {
   position:relative;
@@ -185,6 +186,7 @@ body {
   border: none;
   color: #600000;
   cursor: pointer;
+  padding: 0px 0px;
 }
 .muteButton {
   position:relative;
@@ -192,26 +194,27 @@ body {
   border: none;
   color: #600000;
   cursor: pointer;
+  padding: 0px 0px;
 }
 
 .videoControls{
   position: relative;
   border-radius: 0px 0px 25px 25px;
   border: 3px solid black;
-  padding: 5px;
+  padding: 5px 0px;
   background-color: bisque;
 
   margin: 0 auto;
   text-align: center;
-
-  inline-size: 20vw;
+  width: 10vw;
+  /* inline-size: 20vw; */
   overflow-wrap: break-word;
 }
 
 .videoControls img {
-  width: 2vw;
-  padding: 0;
-  margin: 0;
+  width: 1.5vw;
+  padding: 0px 0px;
+  margin: 0px 0px;
 }
 
 
