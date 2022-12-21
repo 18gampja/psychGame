@@ -30,6 +30,7 @@ class Node {
             this.choice2 = new Answer(video, 'choice2');
             this.choice3 = new Answer(video, 'choice3');
             this.choice4 = new Answer(video, 'choice4');
+            this.endOfVid = data[video].endOfVid;
         }
         
         else
@@ -39,6 +40,7 @@ class Node {
             this.choice2 = null;
             this.choice3 = null;
             this.choice4 = null;
+            this.endOfVid = null;
         }
     }    
 }
@@ -178,7 +180,9 @@ capBtn.onclick = function()
 {
     videoList.previous()
     document.getElementById("tip").style.visibility = "hidden";
+    document.getElementById("confirmButton").style.visibility = "hidden";
     clearAnswers()
+    
 }
 // Get the modal
 var modal = document.getElementById("fileModal");
@@ -288,6 +292,23 @@ function lockOptions(){
 
 function afterVideo() {
     lockOptions();
+
+    if (currentVideo.choice1.text === 'none' && currentVideo.choice2.text === 'none' && currentVideo.choice3.text === 'none' && currentVideo.choice4.text === 'none') {
+        var confirmButton = document.getElementById('continueButton');
+        confirmButton.textContent = 'Continue';
+        confirmButton.style.visibility = 'visible'
+        
+        confirmButton.addEventListener('click', proceed);
+        return
+    }
+    else if (currentVideo.endOfVid === 'True') {
+        var confirmButton = document.getElementById('continueButton');
+        confirmButton.textContent = 'Finish';
+        confirmButton.style.visibility = 'visible'
+        
+        confirmButton.addEventListener('click', finish);
+    }
+
     var prm1 = document.getElementById('prompt1');
     var prm1_h1 = document.getElementById('prompt_h1');
     prm1.style.display = "inline-flex";
@@ -307,6 +328,7 @@ function afterVideo() {
     var prm4_h1 = document.getElementById('prompt_h4');
     prm4.style.display = "inline-flex";
     prm4_h1.innerHTML = currentVideo.choice4.text
+
 }
 
 // Choice controls
@@ -344,6 +366,11 @@ function proceed()
     videoList.progress()
     return;
 
+}
+
+function finish()
+{
+    location.href = './sites/end.html';
 }
 
 function unlockOptions(){
