@@ -35,7 +35,7 @@
             "choice4" : {"text" : "none",
                         "progression" : "none",
                         "tip" : "none"},
-            "endOfVid" : "False"
+            "endOfVid" : "True"
 
         },
 
