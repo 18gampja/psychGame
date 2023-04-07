@@ -293,7 +293,7 @@ function lockOptions(){
 function afterVideo() {
     lockOptions();
 
-    if (currentVideo.choice1.text === 'none' && currentVideo.choice2.text === 'none' && currentVideo.choice3.text === 'none' && currentVideo.choice4.text === 'none') {
+    if (currentVideo.choice1.text === 'none' && currentVideo.choice2.text === 'none' && currentVideo.choice3.text === 'none' && currentVideo.choice4.text === 'none' && currentVideo.endOfVid === 'False') {
         var confirmButton = document.getElementById('continueButton');
         confirmButton.textContent = 'Continue';
         confirmButton.style.visibility = 'visible'
