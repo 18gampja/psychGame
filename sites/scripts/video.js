@@ -305,10 +305,8 @@ function afterVideo() {
         var confirmButton = document.getElementById('continueButton');
         confirmButton.textContent = 'Finish';
         confirmButton.style.visibility = 'visible';
-        var prm1 = document.getElementById('prompt1');
-        var prm1_h1 = document.getElementById('prompt_h1');
-        prm1.style.display = "inline-flex";
-        prm1_h1.innerHTML ='Congratulations on completing your virtual home visit with Katrina Jones!  Even though you would also meet with Ms. Jones and Nelson together, this is the conclusion of the exercise.  Your last task is to complete a case note to summarize your session with Ms. Jones.  Your instructor will guide you through this process.';
+        tip.style.visibility = 'visible';
+        tip.textContent = 'Congratulations on completing your virtual home visit with Katrina Jones!  Even though you would also meet with Ms. Jones and Nelson together, this is the conclusion of the exercise.  Your last task is to complete a case note to summarize your session with Ms. Jones.  Your instructor will guide you through this process.';
         
         confirmButton.addEventListener('click', finish);
     }
